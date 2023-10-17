@@ -1,0 +1,387 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&family=Noto+Sans+KR&display=swap');
+@font-face {
+font-family: 'handel gothic';
+src: url(../font/handel_gothic.ttf) format('truetype');
+}
+
+/* reset */
+* {margin: 0;padding: 0; box-sizing: border-box;}
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, tbody, tfoot, thead, tr, th, td{margin:0;padding:0;}
+h1, h2, h3, h4, h5, h6 {font-weight: 700; font-size: inherit;}
+a {color: inherit; text-decoration: inherit;}
+img {vertical-align: middle;}
+a img {border: none;}
+li {list-style: none;}
+address, em, i {font-style: normal;}
+a:focus {outline: none}
+button:focus {outline: none}
+
+
+body{font-family: 'Noto Sans KR', sans-serif; font-size: 14px; color: #333;} 
+.wrap{width: 100%; overflow: hidden;}
+.en {font-family:'handel gothic',sans-serif;}
+.en_s {font-family: 'Dancing Script', cursive;}
+
+
+/* header 부분 */
+header{width: 100%;}
+.innerheader{max-width: 1720px; height: 110px; line-height: 110px; margin: 0 auto; overflow: hidden;}
+.innerheader .logo{float: left; }
+.innerheader .logo a{display: block; width: 100%; height: 100%;}
+.innerheader .mainmenu{float: right; overflow: hidden; position: relative; }
+span.bar{position: absolute; left: 0; bottom: 40px; width: 0%; height: 3px; background-color: #e7e7e7; transition: all;}
+.innerheader .mainmenu .gnb{float: left; }
+.innerheader .mainmenu .gnb li{float: left;  margin: 0 20px;}
+.innerheader .mainmenu .gnb li a{width: 100%; height: 100%; display: block; color: #555;}
+
+.innerheader .mainmenu .sns{float: left; margin-left: 300px;}
+.innerheader .mainmenu .sns li{float: left; }
+.innerheader .mainmenu .sns li a{display: block; width: 100%; height: 100%; padding: 0 10px;}
+
+
+
+/* visual 부분 */
+.visual{max-width: 1720px; margin: 0 auto; overflow: hidden;}
+.visual .mainimg{float: left; width: 50%;}
+.visual .mainimg img{width: 90%;}
+
+
+.visual .maintxt{float: left; width: 50%; margin-top: 180px;}
+.visual .maintxt .tit{font-size: 72px;}
+.visual .maintxt .tit span.en_s {font-size: 22px; display: block; font-weight: normal;}
+.visual .maintxt .tit .gray{color: #ccc;}
+.visual .maintxt .txt{padding: 50px 0 0 70px;}
+
+
+
+
+
+
+/* 공통요소 작성 */
+.tit {font-size: 50px; line-height: 1.2; font-weight: normal;}
+.tit span{display: block;}
+.tit span b{font-weight: normal;}
+.tit span.en_s{font-size: 22px; font-weight: normal;}
+.tit span.gray{color: #ccc;}
+.txt p{color:#888; line-height: 1.6; margin-bottom: 10px;}
+.txt p b{font-weight: normal;}
+.morebtn{display: inline-block; color: #333; position: relative; padding-left: 45px; margin-top: 20px; transform: skewX(-15deg) translateX(5px); transition: all 1.5s;}
+.morebtn::before{position: absolute; content: ''; width: 42px; height: 1px; background: #333; left: 0; top: 54%;}
+.morebtn:hover, .morebtn:focus{transform: skewX(0deg) translateX(0px); font-weight: bold; transition: all 0.3s;}
+
+section .inner{width: 1320px; margin: auto; overflow: hidden;}
+section .inner .box{float: left; width: 50%; }
+
+
+
+
+
+
+
+/* journal 부분 */
+.journal{position: relative; padding: 190px 0 120px;}
+.journal .scroll{text-transform: uppercase; position: absolute; left: 50%; transform: translateX(-50%); top: -20px; font-size: 10px; letter-spacing: 5px; writing-mode: vertical-rl; padding-top: 90px; }
+.journal .scroll::before{content: ''; position: absolute; height: 75px; width: 1px; background-color: #333; top: 0; left: 6px;}
+
+.journal .tit{margin-bottom: 40px;}
+.journal .inner .box .img{padding-top: 100px;}
+.journal .inner .box ul{border-top:1px solid #e6e6e6 ; padding-top: 40px;}
+.journal .inner .box ul li{overflow: hidden; margin-bottom: 30px;}
+.journal .inner .box ul li h3{float: left; width: 22%;  font-size: 15px; font-weight: bold;}
+.journal .inner .box ul li p{float: left; width: 78%;  color: #888; }
+.journal .morebtn{clear: both; margin-left: 22%; }
+
+
+
+
+
+
+/* service 부분 */
+.service{padding: 190px 0; }
+.service .img{margin-top: 60px;}
+.service .box.design{margin-top: -40%; width: 45%; border-top: 1px solid #c4e5ea;  padding-top: 60px;}
+.service .box.design .tit{font-size: 30px; line-height: 1.4; margin-bottom: 20px; }
+
+
+
+
+
+
+
+
+
+/* customer부분 */
+.customer{padding: 160px; background: url(../img/img_04.jpg) no-repeat center/cover; text-align: center; }
+.customer .tit{color: #fff; font-size: 40px; margin-bottom: 10px;}
+.customer .txt{color: #777;}
+
+
+
+/* team부분 */
+.team{padding: 190px 0; position: relative; }
+.team .inner .box.left{text-align: right; padding-right: 80px;}
+.team .inner .box .txt{margin: 30px 0;}
+.team .inner .box .img{margin-top: 100px;}
+
+
+
+
+
+/* footer */
+footer {width: 1320px; margin: auto;}
+footer .top .tit{color: #e6e6e6; font-size: 62px; text-align: center; margin-bottom: 40px;}
+footer .bottom{border-top: 1px solid #e6e6e6; padding: 40px 0 100px; }
+footer .bottom ul{overflow: hidden; }
+footer .bottom ul li{float: left; width: 23%; color: #aaa; font-size: 12px; line-height: 2; }
+footer .bottom ul li:nth-child(1){width: 31%; font-size: 28px; color: black; line-height: 1.1; }
+footer .bottom ul li b{display: inline-block; color: black; font-weight: normal; font-size: 14px; margin-bottom: 12px; color: #333;}
+
+
+
+
+
+
+/* 공통 타이틀 애니메이션 */
+/* 1, 텍스트애니 */
+@keyframes textani{
+    0%{opacity: 0;}
+    0%{opacity: 0; transform: translate3d(0,40px,0) skewY(8deg); transform-origin: top left;}
+}
+
+
+.tit.motion span{transform: translate3d(0,0,0) skewY(0deg); overflow: hidden;}
+.tit.motion span b{display: block; animation-name: textani; animation-duration: 1.3s;}
+
+.txt.motion p{transform: translate3d(0,0,0) skewY(0deg); overflow: hidden;}
+.txt.motion p b{display: block; animation-name: textani; animation-duration: 2s;}
+
+
+
+/* 2, 이미지 애니 */
+@keyframes imgani {
+    0%{transform: translateY(50px);}
+}
+
+@keyframes mask {
+    0%{height: 100%;}
+}
+
+
+.img.motion{position: relative; animation-name: imgani; animation-duration: 1s;}
+.img.motion::after{content: ''; width: 100%; height: 0; background-color: white; position: absolute; top: 0; left: 0; animation-name: mask; animation-duration: 1.2s; }
+
+.img.blue.motion::after{content: ''; width: 100%; height: 0; background-color: #e8fcff; position: absolute; top: 0; left: 0; animation-name: mask; animation-duration: 1.2s; }
+
+.team .img.motion:after{display: none;}
+
+
+
+
+/* 3,service부분 배경색 change */
+body{transition: all 0.4s;}
+body.on{background-color: #e8fcff;}
+
+
+
+
+/* svg애니메이션 */
+/* stroke-dasharray  길이  */
+/* circlebox{transform: rotate(-90deg);} 원이 틀어져서 각도 줌 */
+.circlebox{transform: rotate(-90deg); } 
+.circlebox .svgani path{fill: none; stroke:#f5f5f5; stroke-width: 25; stroke-dasharray:1564; stroke-dashoffset: 0;}
+.journal .circlebox{position: absolute;  width: 700px; right: 13%; top: 100px; z-index:-1;}
+
+.team .circlebox{position: absolute; width: 700px; left: 20%; top: -50px; z-index:-1}
+
+
+
+.circlebox.motion .svgani path {animation-name: dash; animation-duration: 1.5s;}
+@keyframes dash{
+    0%{stroke-dashoffset:1564;}
+    100%{stroke-dashoffset:0;}
+}
+
+
+
+
+
+/* menuopen 부분 */
+.menuopen button.open{background-color: transparent; border: none; position: fixed; z-index: 100; right: 0; top: 50%; transform: translateY(-50%); padding: 30px 22px; box-sizing: border-box; cursor: pointer;}
+.menuopen button.open::before{content: ''; width: 100%; height: 100%; position: absolute; background-color: #f5f5f5; z-index: -1; top: 0; right: -100px; transition: all 0.5s;}
+.menuopen button.open:hover:before, .menuopen button.open:hover:focus {right: 0; cursor: pointer;}
+
+/* menuwrap 부분 */
+.menuopen .menuwrap{width: 100%; height: 100vh; position: fixed; top: 0; right: 0; z-index: 100; background-color: #eee;}
+.menuopen .menuwrap .tit{color: #ccc; position: absolute; top: 50%; transform: translateY(-50%); left: 25%; font-size: 60px;  }
+.menuopen .menuwrap .tit a{display: inline-block; margin-bottom: 20px; position: relative; transition: all .3s;}
+.menuopen .menuwrap .tit a:hover,.menuopen .menuwrap .tit a:focus {transform: translateX(30px); color: #333;}
+
+.menuopen .menuwrap .tit a::after{content: ''; width: 0; height: 2px; background-color: #333; position: absolute; left: 0; bottom: -5px; transition: all 0.3s;}
+.menuopen .menuwrap .tit a:hover:after, .menuopen .menuwrap .tit a:focus{width: 100%;}
+
+.menuopen .menuwrap .close:nth-child(1){position: absolute; top: 50%;  left: 30px; transform: translateY(-50%);}
+.menuopen .menuwrap .close.en{position: absolute; right: 50px; top: 50px; font-size: 25px; border-bottom: 1px solid #888; color: #888;}
+
+/* menuopen 열기 */
+.menuopen .menuwrap{width: 0%; transition: all .0s; transform: skewY(40deg); opacity: 0;}
+.menuopen .menuwrap.on{width: 100%; transition: all .5s; transform: skewY(0deg); opacity: 1; }
+
+/* menuwrap에 li 부분 */
+.menuopen .menuwrap ul{display: none;}
+.menuopen .menuwrap.on ul{display: block;}
+
+
+/* .menuwrap.on에 배경 원*/
+.menuopen .menuwrap.on::before{content: ''; width: 700px; height: 700px; background-color: #fff; border-radius: 50%; position: absolute; left: 30%; top: 50%; transform: translateY(-50%);}
+.menuopen .menuwrap.on::before{animation-name: menuwrap2; animation-duration: 1.8s;}
+
+@keyframes menuwrap2{
+    0%{opacity: 0;}
+    40%{opacity: 0; transform: translateY(-50%) scale(0.5);}
+}
+
+
+
+
+
+
+
+
+
+
+
+/*반응형웹제작*/
+
+/*pc모드*/
+@media screen and (max-width:1720px){ /*1720px~1401px사이*/
+    .innerheader {max-width: 100%; padding: 0 30px; box-sizing: border-box;}
+    .innerheader .mainMenu .sns {margin-left: 200px;}
+    section.visual {max-width: 100%; padding: 0 30px; box-sizing: border-box;}
+    section.visual .maintxt {margin-top: 150px;}
+    section.visual .maintxt .tit {font-size: 62px;}    
+}
+
+/*1024 테블릿모드*/
+@media screen and (max-width:1400px){/*1400px~1024px사이*/
+    section.visual .maintxt {margin-top: 100px;}
+    section.visual .maintxt .tit {font-size: 46px;}
+    section.visual .maintxt .txt{padding: 20px 0px 0px 0px;}
+    section .inner{width: 100%; padding: 0 30px; box-sizing: border-box;}
+    .img img {width:100%;}
+    /*section.journal{overflow: hidden;}*/
+    section.journal .scroll{display: none;}
+    section.journal .circlebox{ right: -10%; top:0;}
+    section.journal .inner .box .img{width: 90%;}
+    section.customer {padding: 160px 0;}
+    footer {width: 100%; padding: 0 30px; box-sizing: border-box;}
+}
+
+/*1024 이하 테블렛*/
+@media screen and (max-width:1000px){/*768px 까지*/
+    .innerheader {height: 80px; line-height: 80px;}
+    .innerheader .mainmenu{width: 0; height: 0; opacity: 0; display: none;}
+    .menuopen button.open{position: absolute; top: 0; transform: none; width: 70px; height: 80px; padding: 0; line-height: 80px;}
+    .menuopen button.open:before {display: none;}
+    section.visual .mainImg {width: 100%; float: none;}
+    section.visual .mainImg img {width: 100%;}
+    section.visual .maintxt{width: 100%; float: none; margin-top: 50px;}
+    section .inner .box {float: none; width: 100%;}
+    section.journal{padding: 80px 0;}
+    section.journal .circlebox {top:200px;}
+    section.journal .inner .box .img {margin: 0 auto 50px; padding-top: 0; width: 80%; }
+    section.service {padding: 80px 0;}
+    section.service .txt {margin-top: 20px;}
+    section.service .inner .box.design {margin-top: 50px; width: 100%;}
+    section.service .inner .box .img { margin: 50px auto 0; width:90%;}
+    section.service .inner .box .img {width: 70%; }
+    section.service .inner .box.design .img {width: 70%; margin:50px 0 0;}
+    section.service .img.motion:after {background: #fff;}
+    section.service .inner .box.design .tit {font-size: 35px;}
+    section.customer{padding: 120px 0;}
+    section.customer .tit {font-size: 30px;}
+    section.team{padding: 80px 0; overflow: hidden}
+    section.team .circleBox {left: 15%;}
+    section.team .inner .box.left {padding-right: 0; overflow: hidden;}
+    section.team .inner .box .img{margin-top: 50px; width: 70%; float: right; clear: both;} 
+    section.team .inner .box:nth-child(2) .img {width: 100%; margin: 50px 0;}
+    section.team .inner .box .tit {margin-top: 0; clear: both;}
+    section.team .inner .box.left .morebtn {float: right; margin-right: 5px;}
+    footer .bottom ul li:nth-child(1) {width: 100%; margin-bottom: 30px;}
+    footer .bottom ul li {width: 33.3333%;}
+}
+
+/*모바일해상도 767px*/
+@media screen and (max-width:767px){
+    body{font-size: 13px;}
+    .innerheader {height: 60px; line-height: 60px; padding: 0 20px;}
+    .menuopen button.open {height: 60px;  line-height: 60px; width:52px;}
+    .menuopen button.open img {height: 38px;}
+    .menuopen .menuwrap .tit {font-size: 35px; left: 20px;}
+    .menuopen .menuwrap .close:nth-child(1) {top:20px; left: 20px; transform: none;}
+    .menuopen .menuwrap .close.en {display: none;}
+    .menuopen .menuwrap.on:before {left: 20%;}
+    section.visual{padding: 0 20px;}
+    .tit {font-size: 30px;}
+    section.visual .maintxt .tit {font-size: 31px;}
+    .tit span.en_s {font-size: 18px;}
+    .txt {text-align: justify;}
+    .morebtn{font-size: 12px;}
+    section .inner {padding: 0 20px;}
+    section.journal {padding: 50px 0;}
+    section.journal .circlebox {top:15%; right: -4%;}
+    section.journal .inner .box .img {width: 100%; margin-bottom: 30px;}
+    section.journal .inner .box .tit {margin-bottom: 20px;}
+    section.journal .inner .box ul {padding-top: 20px;}
+    section.journal .inner .box ul li {margin-bottom: 20px;}
+    section.journal .inner .box ul li h3 {width: 100%; margin-bottom: 10px;}
+    section.journal .inner .box ul li p {font-size: 12px; width: 100%;}
+    section.journal .inner .box .morebtn {margin-left: 0;}
+    section.service {padding: 50px 0;}
+    section.service .inner .box .img {width: 100%; margin-top: 30px;}
+    section.service .inner .box.design .img {width: 100%;}
+    section.service .inner .box .img.motion:after {background: #e8fcff;}
+    section.service .inner .box.design .img.motion:after {background: #fff;}
+    section.service .inner .box.design {padding-top: 50px;}
+    section.service .inner .box.design .tit {font-size: 25px; margin-bottom: 10px;}
+    section.customer {padding: 80px 20px;}
+    section.customer .tit {font-size: 25px;}
+    section.team {padding: 50px 0;}
+    section.team .circlebox {left: 4%;}
+    section.team .inner .box .txt {margin: 30px 0 10px;}
+    section.team .inner .box .img {margin-top: 30px;}
+    section.team .inner .box:nth-child(2) .img {margin: 30px 0;}
+    footer {padding: 0 20px;}
+    footer .top .tit {font-size: 31px; padding-bottom: 30px;}
+    footer .bottom ul li:nth-child(1) {font-size: 20px;}
+    footer .bottom ul li {width: 100%; margin-bottom: 12px;}
+    footer .bottom ul li b:nth-child(1) {font-size: 13px;}
+        
+    }
+    
+    /*320모바일*/
+    @media screen and (max-width:320px) {
+        body{font-size: 12px;}
+        .tit span.en_s {font-size: 16px;}
+        section.visual .maintxt .tit, .tit,footer .top .tit {font-size: 27px;}
+        .menuopen .menuwrap .tit {font-size: 27px;}
+        section.journal .inner .box ul li h3 {font-size: 14px;}
+        section.service .inner .box.design .img.motion:after {background: #e8fcff;}
+        section.service .inner .box.design .tit {font-size: 22px;}
+        .morebtn {font-size: 11px;}
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

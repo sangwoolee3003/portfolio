@@ -1,0 +1,59 @@
+*{margin: 0; padding: 0;}
+.svgAni{}
+/* stroke-dasharray 총길이로 줘야함 */
+/*stroke-dashoffset 시작점이 안보이게끔 하기 위해 총길이에 조금 길이를 넣어줌  */
+#svgAni01{stroke-dasharray:  417; stroke-dashoffset: 417;animation: ani1  1s linear 0s forwards;}
+#svgAni02{stroke-dasharray:  49; stroke-dashoffset:  50;animation: ani2  1s linear 1s forwards;}
+#svgAni03{stroke-dasharray:  348; stroke-dashoffset: 350;animation: ani3  1s linear 2s forwards;}
+#svgAni04{stroke-dasharray:  509; stroke-dashoffset: 510;animation: ani4  1s linear 3s forwards;}
+#svgAni05{stroke-dasharray:  388; stroke-dashoffset: 389;animation: ani5  1s linear 4s forwards;}
+#svgAni06{stroke-dasharray:  625; stroke-dashoffset: 626;animation: ani6  1s linear 5s forwards;}
+#svgAni07{stroke-dasharray:  491; stroke-dashoffset: 492;animation: ani7  1s linear 6s forwards;}
+
+
+@keyframes ani1{
+    0%{stroke-dashoffset:417 ;}
+    100%{stroke-dashoffset:0 ;}
+}
+
+@keyframes ani2{
+    0%{stroke-dashoffset:49 ;}
+    100%{stroke-dashoffset:0 ;}
+}
+
+@keyframes ani3{
+    0%{stroke-dashoffset:348 ;}
+    100%{stroke-dashoffset:0 ;}
+}
+
+@keyframes ani4{
+    0%{stroke-dashoffset:509 ;}
+    100%{stroke-dashoffset:0 ;}
+}
+
+@keyframes ani5{
+    0%{stroke-dashoffset:388 ;}
+    100%{stroke-dashoffset:0 ;}
+}
+
+@keyframes ani6{
+    0%{stroke-dashoffset:625 ;}
+    100%{stroke-dashoffset:0 ;}
+}
+
+@keyframes ani7{
+    0%{stroke-dashoffset:491 ;}
+    100%{stroke-dashoffset:0 ;}
+}
+
+
+
+
+
+/* #svgAni01 ->red : 414
+#svgAni02 ->orange : 46
+#svgAni03 ->yellow : 344
+#svgAni04 ->green : 507
+#svgAni05 ->blue : 386
+#svgAni06 ->navy : 623
+#svgAni07 ->purple : 489 */
