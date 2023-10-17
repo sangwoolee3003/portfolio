@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HYUNDAL CloneCoding</title>
+    <link rel="stylesheet" href="../css/detail/hyundal_de.css">
+    <link rel="stylesheet" href="../css/font.css">
+    <link rel="stylesheet" href="../css/slick.css">
+    <script src="../js/jquery-3.3.1.min.js"></script>
+    <script src="../js/slick.min.js"></script>
+    <script src="../js/scrolla.jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.1/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.1/ScrollTrigger.min.js"></script>
+    
+</head>
+<body>
+    <div class="wrap">
+        <header>
+            <div class="inner">
+                <div class="logobox">
+                    <a href="../index.html"><img src="../img/INDEX/logo2.png" alt=""></a>
+                </div>
+                <div class="menubox">
+                    <a href="#">
+                        <img src="../img/INDEX/menu_icon2.png" alt="">
+                    </a>
+                </div>
+            </div>
+            <!-- 메뉴 부분 -->
+            <div class="menu_open">
+                <div class="menuwrap">
+                    <div class="close">
+                        <a href="#">
+                            <img src="../img/INDEX/close_icon.png" alt="">
+                        </a>
+                    </div>
+                    <ul class="list en3">
+                        <li>
+                            <a href="../index.html" data-replace="HOME"><p>HOME</p></a>
+                        </li>
+                        <li>
+                            <a href="../about.html" data-replace="ABOUT ME"><p>ABOUT ME</p></a>
+                        </li>
+                        <li>
+                            <a href="../work.html" data-replace="WORKS"><p>WORKS</p></a>
+                        </li>
+                        <li>
+                            <a href="../pocess.html" data-replace="PROCESS"><p>PROCESS</p></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </header>
+        <section class="main" style="background: url(../img/INDEX/gray_bg.png);">
+            <div class="inner">
+                <div class="imgbox">
+                    <img src="../img/INDEX/web_mockup2.png" alt="">
+                </div>
+                <div class="titlebox animate" data-animate="motion" >
+                    <h2>HYUNDAL</h2>
+                    <h4>Clone Coding</h4>
+                    <p>scroll <span></span></p>
+                </div>
+                <div class="slide_box animate" data-animate="motion">
+                    <ul class="slide">
+                        <li>
+                            <img src="../img/INDEX/hyundal_side_1.png" alt="">
+                        </li>
+                        <li>
+                            <img src="../img/INDEX/hyundal_side_2.png" alt="">
+                        </li>
+                        <li>
+                            <img src="../img/INDEX/hyundal_side_3.png" alt="">
+                        </li>
+                        <li>
+                            <img src="../img/INDEX/hyundal_side_1.png" alt="">
+                        </li>
+                        <li>
+                            <img src="../img/INDEX/hyundal_side_2.png" alt="">
+                        </li>
+                        <li>
+                            <img src="../img/INDEX/hyundal_side_3.png" alt="">
+                        </li>
+                    </ul>
+                    <div class="textbox">
+                        <h2><span>HYUNDAL</span></h2>
+                        <p class="eng">
+                            In order to improve understanding of the layout,<br class="mo"> 
+                            I personally cloned website,which uses a lot of animation and various layout.
+                        </p>
+                        <p class="ko">
+                            기본적인 레이아웃에 대한 이해와 구조 파악에 중점두고 Clone Coding을 진행하였으며 <br class="mo"> 아래 디바이스 버튼을 클릭하면 페이지가 열립니다.
+                        </p>
+                        <div class="link">
+                            <a href="#" onclick="window.open('../clone_coding_page/hyundal/index.html', '_blank','width=1920 height=1080')">PC</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+
+
+
+    <script>
+
+// 1.스크립트 위로 튕기는것
+$(document).on('click', 'a[href="#"]', function(e){
+    e.preventDefault();
+});
+
+
+
+// 스크롤라
+$(function() {
+    $('.animate').scrolla({
+        mobile: true, //모바일버전시 활성화
+        once: false //스크롤시 딱 한번만 하고싶을땐 true
+    });    
+}); 
+
+
+// menu open/close 부분
+$(function(){
+    $('.menubox a').on('click', function(){
+        $('.menu_open').addClass('on');
+    })
+    $('.menu_open .menuwrap .close a').on('click', function(){
+        $('header .menu_open.on').removeClass('on');
+    })
+
+
+});
+
+
+
+// slick slide 부분
+    $('.slide').slick({
+        infinite: true,
+
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        autoplay:true,
+        autoplaySpeed:1500,
+        arrows: false,
+        centerMode: true,
+        // centerPadding: '20px',
+        responsive: [
+            {
+            breakpoint: 1299,
+            settings: {
+                slidesToShow: 1,
+                slidesToScroll: 1
+            }
+            }
+        
+        ]
+    });
+
+
+
+
+    // main 고정 후 애니메이션 부분
+    gsap.registerPlugin(ScrollTrigger);
+
+    gsap.timeline({
+        scrollTrigger: {
+            trigger:'.main',
+            start: '100% 100%', 
+            end: '100%',
+            scrub:1,
+            // markers:true,
+            pin:true //화면 고정 역할
+            // pinSpacing: false
+        }
+
+    })
+    .fromTo('.titlebox', {'opacity':'1',},{ 'opacity':'0',  ease:'none', duration:1},0)
+    .to('.main .inner .imgbox', {'scale':'0','rotation':'-80', 'ease':'none', 'duration':'1','opacity':'0.3'},0)
+    .fromTo('.slide_box', {'opacity':'0',},{ 'opacity':'1',  ease:'none', duration:1},1)
+
+
+
+    </script>
+</body>
+</html>
