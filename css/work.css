@@ -1,0 +1,473 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap');
+
+
+/* reset */
+* {margin: 0;padding: 0; box-sizing: border-box;}
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, tbody, tfoot, thead, tr, th, td{margin:0;padding:0;}
+h1, h2, h3, h4, h5, h6 {font-weight: normal; font-size: inherit;}
+a {color: inherit; text-decoration: inherit;}
+img {vertical-align: middle;}
+a img {border: none;}
+li {list-style: none;}
+address, em, i {font-style: normal;}
+a:focus {outline: none}
+button:focus {outline: none}
+
+
+
+body::-webkit-scrollbar { 
+    display: none; /* 크롬, 사파리, 오페라, 엣지 */
+}
+body{font-family: 'Stolzl-Book';}
+.en{font-family: 'Stolzl-Regular';}
+.en2{font-family: 'Switzer-Regular';}
+.en3{font-family: 'Switzer-Bold';}
+.en4{font-family: 'Cormorant-Bold';}
+.en5{font-family: 'Bodidota';}
+.en6{font-family: 'Stolzl-Bold';}
+.wrap{width: 100%;  background-color: #000000; overflow: hidden;}
+
+
+
+/* topbtn 부분 */
+.topbtn_box{width: 80px; height: 80px; position: fixed; right: 5%; bottom: 5%; z-index: 99;}
+.topbtn_box a{width: 100%; height: 100%; position: relative;}
+.topbtn_box img{width: 100%; }
+.topbtn_box img:nth-child(2){display: none;}
+.topbtn_box a:hover img:nth-child(1){display: none;}
+.topbtn_box a:hover img:nth-child(2){display: block; transform: scale(1.2); transition: all 1s; }
+
+
+/* 
+.topbtn_box{width: 100%; background-color: #009fff; }
+.topbtn_box a{display: block; position: relative; width: 10px;}
+.topbtn_box a img{position: absolute; left: 0; top: 0; width: 100%;}
+.topbtn_box a img:nth-child(2){opacity: 0;} */
+
+
+header{width: 100%;  height: 100px; line-height: 100px; position: fixed; z-index: 100;  }
+header .inner{width: 90%; height: 100%;  margin: 0 auto; overflow: hidden; }
+header .inner .logobox{width: 50px; height:50px; float: left;}
+header .inner .logobox a{display: block; width: 100%; height: 100%; }
+header .inner .logobox a img{width: 100%; height: 100%; }
+
+header .inner .menubox{float: right;}
+header .inner .menubox a{display: block; width: 27px; height: 27px;}
+header .inner .menubox a img{transition: all .5s; width: 100%; height: 100%;}
+header .inner .menubox a:hover img{transform: scale(1.2);}
+
+
+
+header .menu_open {width: 100%; height: 100vh; background-color: #262626; position: fixed; left: 0; top: -300%; transition: all 1s;}
+/* 메뉴 창 클릭시 on부분 스타일 */
+header .menu_open.on{top:0; transition: all .6s;}
+
+header .menu_open div.close{width: 30px; height: 30px; position: absolute; right:25%; top: 12%;}
+header .menu_open div.close a{display: block; position: relative; z-index: 1000;}
+header .menu_open div.close a img{ width: 100%; height: 100%; display: block;  transition: all .5s;}
+header .menu_open div.close a:hover img{transform: rotate(360deg) scale(1.2); }
+
+
+header .menu_open ul.list{width: 50%;  text-align: center; position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); z-index: 500; color: white;} 
+header .menu_open ul.list li{width: 100%; font-size: 80px; text-align: center; }
+header .menu_open ul.list li a{ display: inline-block; }
+
+
+
+
+
+
+/* 메뉴 호버 부분 */
+
+header .menu_open ul.list li a{  
+    overflow: hidden;
+    position: relative;
+    display: inline-block;
+
+}
+header .menu_open ul.list li a::before, a::after{
+    content: '';
+    position: absolute;
+    width: 100%;
+    left: 0;
+}
+
+header .menu_open ul.list li a::before {
+    background-color: #42B5F9;
+    height: 2px;
+    bottom: 0;
+    transform-origin: 100% 50%;
+    transform: scaleX(0);
+    transition: transform .3s ;
+    /* transition: transform .3s cubic-bezier(0.76, 0, 0.24, 1); */
+}
+
+
+header .menu_open ul.list li a::after {
+    content: attr(data-replace); 
+    /* attr(data-replace)는 해당 요소의 data-replace 속성 값을 가져와서 콘텐츠로 사용하는 것을 의미합니다. */
+    height: 100%;
+    top: 0;
+    transform-origin: 100% 50%;
+    transform: translate3d(200%, 0, 0);
+    transition: transform .3s;
+    color: #42B5F9;
+}
+
+
+
+header .menu_open ul.list li a:hover::before {
+    transform-origin: 0% 50%;
+    transform: scaleX(1);
+}
+header .menu_open ul.list li a:hover::after {
+    transform: translate3d(0, 0, 0);
+}
+
+header .menu_open ul.list li a p {
+    display: inline-block;
+    transition: transform .3s ;
+}
+header .menu_open ul.list li a:hover p {
+    transform: translate3d(-100%, 0, 0);
+}
+
+
+
+/* visual 부분 */
+.visual{width: 100%; height: 100vh; padding: 50px 0; }
+.visual .inner{width: 100%; height: 100%; margin: 0 auto; position: relative; overflow: hidden; }
+.visual .inner .title_box {width: 90%; color: white; position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); z-index: 1; overflow: hidden; line-height: 1.2;  }
+.visual .inner .title_box h3{ color: white; font-size: 5vw; overflow: hidden;}
+
+
+.visual .inner .title_box h3 span.purple{color: #42B5F9;}
+
+
+.visual .inner ul{width: 100%; height: 100%; display: flex; justify-content: space-between; flex-wrap: wrap;} 
+.visual .inner ul li{width: 10%;  margin:10px; filter: brightness(20%); border-radius: 10px; overflow: hidden; transform: scale(0.05);} 
+.visual .inner ul li img{display: block; width: 100%; }
+
+
+/* visual text 부분 애니메이션 */
+.visual .inner .title_box h3:nth-child(1) span.hidden{display: inline-block; animation-name: slide-y; animation-duration: 1s;}
+.visual .inner .title_box h3:nth-child(2) span.hidden{display: inline-block; animation-name: slide-y; animation-duration: 1s;}
+.visual .inner .title_box h3:nth-child(3) span.hidden{display: inline-block; animation-name: slide-y; animation-duration: 1s;}
+
+
+@keyframes slide-y{
+    0%{transform: translatey(100%) ;}
+}
+
+
+
+
+
+
+/* months 부분 */
+.months{width: 100%; height: 100vh; padding: 100px 0;  position: relative; margin: 300px 0 500px 0;  }
+.months .inner{width: 80%;  margin: 0 auto;  }
+.months .inner .main{width: 100%; font-size: 4vw; color: white; margin-bottom: 30px; overflow: hidden;}
+.months .inner .main p {width: 100%; line-height: 1;}
+.months .inner .main p span{display: inline-block; -webkit-text-stroke: 2px  #42B5F9; color: transparent;}
+.months .inner .sub_1 {color: white; font-size: 1.5vw; margin-bottom: 50px; overflow: hidden;}
+.months .inner .sub_2 {width: 100%; margin-bottom: 100px;}
+.months .inner .sub_2 p{font-size: 1.5vw; color: white; margin-bottom: 30px; transition: all .5s;}
+.months .inner .sub_2 img{display: inline-block; width: 40px;height: 40px; margin-right: 5px;}
+
+
+.months div.marquee{width: 100%; margin-top: 150px; display: flex; justify-content: space-between; background-image: linear-gradient( to right, #2188FF 0%, #42B5F9 70%); padding: 20px 30px; }
+.months div.marquee p { white-space: nowrap; color: white; font-family: 'Courgette', cursive; font-size: 30px;  margin-right: 20px;}
+
+/* months marquee의 심플리스크롤 플러그인 부분 */
+.months .simply-scroll .simply-scroll-clip {overflow: hidden ; }
+
+
+/* Publishing부분 */
+.Publishing{width: 100%;  margin-bottom: 800px; padding: 50px 0 ;   }
+.Publishing .titlebox{width: 100%; height: 100vh; padding-top: 40vh; padding-left: 10%;   }
+.Publishing .titlebox h2{font-size: 5vw; color: white; margin-bottom: 5px;}
+.Publishing .titlebox p{color: white; font-size: 1vw;}
+
+
+.Publishing .inner{width: 80%;  margin: 0 auto;  position: relative; }
+/* .Publishing .inner .titlebox{width: 100%; height: 100vh;  margin-bottom: 350px;  }
+.Publishing .inner .titlebox h2{font-size: 100px; color: white; margin-bottom: 30px;}
+.Publishing .inner .titlebox p{color: white;} */
+
+
+
+
+.Publishing .inner ul.list{width: 90%; height: 6000px; position: relative;  margin: 0 auto;}
+.Publishing .inner ul.list li{background-color: black; position: absolute; }
+.Publishing .inner ul.list li div.imgbox{width: 100%; }
+.Publishing .inner ul.list li div.imgbox a{display: block; width: 100%;  overflow: hidden;  }
+.Publishing .inner ul.list li div.imgbox a img{display: block; width: 100%;  transition: all 1s; opacity: 0.5; transform: scale(1);  }
+
+
+
+
+
+.Publishing .inner ul.list li:nth-child(1){left: 7%; width: 45%; }
+.Publishing .inner ul.list li:nth-child(2){left: 55%; top: 8%; width: 50%;}
+.Publishing .inner ul.list li:nth-child(3){left: 17%; top: 19%; width: 55%;}
+.Publishing .inner ul.list li:nth-child(4){left: 8%; top: 30%; width: 45%;}
+.Publishing .inner ul.list li:nth-child(5){left: 50%; top: 42%; width: 50%  }
+.Publishing .inner ul.list li:nth-child(6){left: 2%; top: 54%; width: 45%  }
+.Publishing .inner ul.list li:nth-child(7){left: 53%; top: 65%; width: 45%  }
+.Publishing .inner ul.list li:nth-child(8){left: 26%; top: 78%; width: 55% }
+.Publishing .inner ul.list li:nth-child(9){left: 1%; top: 88%; width: 50%; }
+.Publishing .inner ul.list li:nth-child(10){left: 55%; top: 100%; width: 53%; }
+
+
+.Publishing .inner ul.list li div.textbox{color: white;  overflow: hidden; }
+.Publishing .inner ul.list li div.textbox h4{margin-top: 10px; margin-bottom: 10px;}
+.Publishing .inner ul.list li div.textbox p span{display: inline-block;  margin-right: 10px;  padding: 10px; background-color: rgb(255, 255, 255); font-size: 15px; color: black; font-weight: bold;}
+
+
+
+
+
+/* Publishing hover 부분 */
+.Publishing .inner ul.list li div.imgbox a:hover img{opacity: 1; filter: blur(0px); transform: scale(1.1); }
+.Publishing .inner ul.list li:hover div.textbox h4{color: #42B5F9;}
+.Publishing .inner ul.list li div.textbox p span:hover{background-color: #42B5F9; color: white;}
+
+
+
+/* ncs */
+.ncs{width: 100%; padding: 100px 0; }
+.ncs .inner{width: 100%; margin: 0 auto;}
+.ncs .inner .titlebox{width: 80%; margin: 0 auto 300px;}
+.ncs .inner .titlebox h2{font-size: 5vw; color: white; margin-bottom: 5px;}
+.ncs .inner .titlebox p{color: white; font-size: 1vw;} 
+
+
+.ncs .inner .listbox{width: 100%; }
+.ncs .inner .swiper{width: 100%; margin: 0 auto;}
+.ncs .inner .swiper .swiper-wrapper{width: 100%; }  
+.ncs .inner .swiper .swiper-wrapper .swiper-slide{width: 550px; overflow: hidden; }
+.ncs .inner .swiper .swiper-wrapper .swiper-slide a{display: block; width: 100%;  }
+.ncs .inner .swiper .swiper-wrapper .swiper-slide a img{width: 100%;   transform: scale(1.1); transition: all .5s;}
+.ncs .inner .swiper .swiper-wrapper .swiper-slide:hover img{ transform: scale(1);}
+
+
+.ncs .inner .edu{width: 80%; margin: 300px auto 0; background-color: #000000; border-top:3px solid #42B5F9; border-bottom: 3px solid #42B5F9; font-size: 0.8vw;}
+.ncs .inner .edu .title_list{width: 100%;   border-bottom: 1px solid rgba(255,255,255,0.2);}
+
+.ncs .inner .edu .title_list .name_box{display: flex; justify-content: space-between;}
+.ncs .inner .edu .title_list .name_box p{ font-size:  1vw; width: 16%; text-align: center; padding: 10px 0px; color: white; font-weight: bold; color: #42B5F9;  }
+.ncs .inner .edu .title_list .list_box{display: flex; justify-content: space-between;  }
+
+
+
+
+.ncs .inner .edu .edu_list{width: 100%;  border-bottom: 1px solid rgba(255,255,255,0.2);}
+.ncs .inner .edu .edu_list .list_box{ display: flex; justify-content: space-between;  }
+.ncs .inner .edu .edu_list .list_box p{ width: 16%; text-align: center; padding: 15px 0px; color: white; }
+.ncs .inner .edu .edu_list .list_box p:nth-child(2){align-self: center;  }
+.ncs .inner .edu .edu_list .list_box p:last-child{position: relative;}
+.ncs .inner .edu .edu_list .list_box p:last-child a{display: block; }
+.ncs .inner .edu .edu_list .list_box p:last-child a img{ position: absolute;  left: 50%; top: 50%; transform: translate(-50%,-50%);}
+
+
+
+.ncs .inner .edu .edu_list .list_box p:last-child a img:nth-child(1){display: block;}
+.ncs .inner .edu .edu_list .list_box p:last-child a img:nth-child(1).on{display: none;}
+.ncs .inner .edu .edu_list .list_box p:last-child a img:nth-child(2){display: none;}
+.ncs .inner .edu .edu_list .list_box p:last-child a img:nth-child(2).on{display: block;}
+
+
+
+.ncs .inner .edu .edu_list div.text{color:#42B5F9; height: 0px; opacity: 0;  line-height: 50px; padding-left: 80px;  border-top: 1px solid rgba(255,255,255,0.2); transition: all 0.5s;}
+.ncs .inner .edu .edu_list div.text.on{ height: 50px; opacity: 1;  line-height: 50px;}
+
+
+
+
+
+/* footer 부분 */
+footer{width: 100%; height: 100vh; position: relative; margin-top: 500px; padding: 200px 0;  } 
+footer .inner{width: 1700px; margin: 0 auto; display: flex; justify-content: space-between;} 
+footer .inner .leftbox{width: 45%; cursor: pointer;} 
+footer .inner .leftbox h3{color: white; font-size: 120px; position: relative;}
+footer .inner .leftbox h3 span.linebox{width: 420px; height: 3px; display: inline-block; background-color: white; position: absolute; left:35%; top: 50%; transition: all .5s;}
+
+footer .inner .rightbox{width: 40%; margin-top: 350px;} 
+footer .inner .rightbox span{display: block; font-size: 30px; color:  #a3a3a3; ; } 
+footer .inner .rightbox h3{color:  white; ; font-size: 80px; margin-bottom: 70px;}
+footer .inner .rightbox p{color:  #ffffff; ; font-size: 30px;}
+footer .inner .rightbox p span{display: inline-block; color: white; font-size: 30px; }
+
+
+
+
+/* footer 애니메이션 */
+footer .inner .leftbox{-webkit-mask-image: linear-gradient(-75deg, rgba(0,0,0,.6) 30%, #000 50%, rgba(0,0,0,.6) 70%); -webkit-mask-size: 200%; animation: shine 1s infinite;}
+footer .inner .rightbox{ -webkit-mask-image: linear-gradient(-75deg, rgba(0,0,0,.6) 30%, #000 50%, rgba(0,0,0,.6) 70%); -webkit-mask-size: 200%;
+animation: shine 1.5s infinite;}
+
+@-webkit-keyframes shine {
+    0%{-webkit-mask-position: 150%;}
+    100%{-webkit-mask-position: -50%;}
+}
+
+
+
+
+
+/* 반응형 */
+
+@media screen and (min-width:1000px) and (max-width:1500px) {
+    .months div.marquee{padding: 10px 20px;}
+
+    .ncs .inner .edu .edu_list div.text{ padding-left: 0px; }
+    .ncs .inner .swiper .swiper-wrapper .swiper-slide {width: 30%;}
+    .ncs .inner .edu {font-size: 1.2vw;}
+
+
+
+    .Publishing .inner ul.list li:nth-child(1){width: 75%;}
+    .Publishing .inner ul.list li:nth-child(2){width: 75%; left: 32%;}
+    .Publishing .inner ul.list li:nth-child(3){width: 75%;}
+    .Publishing .inner ul.list li:nth-child(4){width: 75%;}
+    .Publishing .inner ul.list li:nth-child(5){width: 75%; left: 36%;}
+    .Publishing .inner ul.list li:nth-child(6){width: 75%;}
+    .Publishing .inner ul.list li:nth-child(7){width: 75%; left: 37%;}
+    .Publishing .inner ul.list li:nth-child(8){width: 75%;}
+    .Publishing .inner ul.list li:nth-child(9){width: 75%;}
+    .Publishing .inner ul.list li:nth-child(10){width: 75%; left: 34%;}
+
+    footer { margin-top: 0px; padding: 500px 0 50px; height: auto;}
+    footer .inner{flex-wrap: wrap; width: 90%; margin: 0 auto;}
+    footer .inner .leftbox{width: 100%;}
+    footer .inner .leftbox h3{font-size: 7vw;}
+
+    footer .inner .rightbox{width: 100%; margin-top: 100px; text-align: right;}
+    footer .inner .rightbox span{font-size: 2vw;}
+
+    footer .inner .leftbox h3 span.linebox{width: 23%; left: 20%;}
+    footer .inner .rightbox h3{font-size: 6vw; margin-bottom:40px}
+    footer .inner .rightbox p{font-size: 2vw;}
+    footer .inner .rightbox p span{font-size: 2vw;}
+}
+
+
+
+
+
+@media screen and (min-width:500px) and (max-width:999px) {
+
+    .visual .inner .title_box h3{font-size: 8vw;}
+
+    .months .inner{width: 97%;}
+    .months .inner .main{font-size: 5.5vw;}
+    .months .inner .sub_1{font-size: 2.5vw;}
+    .months .inner .sub_2 p {font-size: 2.5vw;}
+    .months div.marquee{padding: 10px 20px;}
+
+
+    .Publishing .titlebox h2{font-size: 9vw;}
+    .Publishing .titlebox p{font-size: 1.5vw;}
+
+
+    .Publishing .inner ul.list li:nth-child(1){width: 90%;}
+    .Publishing .inner ul.list li:nth-child(2){width: 90%; left: 12%;}
+    .Publishing .inner ul.list li:nth-child(3){width: 90%;}
+    .Publishing .inner ul.list li:nth-child(4){width: 90%;}
+    .Publishing .inner ul.list li:nth-child(5){width: 90%; left: 6%;}
+    .Publishing .inner ul.list li:nth-child(6){width: 90%;}
+    .Publishing .inner ul.list li:nth-child(7){width: 90%; left: 20%;}
+    .Publishing .inner ul.list li:nth-child(8){width: 90%;}
+    .Publishing .inner ul.list li:nth-child(9){width: 90%;}
+    .Publishing .inner ul.list li:nth-child(10){width: 90%; left: 24%;}
+
+
+    .ncs .inner .titlebox h2{font-size: 9vw;}
+    .ncs .inner .titlebox p{font-size: 1.5vw;}
+    .ncs .inner .swiper .swiper-wrapper .swiper-slide {width: 50%;}
+    .ncs .inner .edu {font-size: 1.2vw;}
+    .ncs .inner .edu .edu_list div.text{ padding-left: 0px; }
+    .ncs .inner .edu .edu_list div.text.on{height: 10%; line-height: 25px;}
+
+
+
+    footer { margin-top: 0px; padding: 500px 0 50px; height: auto;}
+    footer .inner{flex-wrap: wrap; width: 90%; margin: 0 auto;}
+    footer .inner .leftbox{width: 100%;}
+    footer .inner .leftbox h3{font-size: 7vw;}
+
+    footer .inner .rightbox{width: 100%; margin-top: 100px; text-align: right;}
+    footer .inner .rightbox span{font-size: 2vw;}
+
+    footer .inner .leftbox h3 span.linebox{width: 23%; left: 20%;}
+    footer .inner .rightbox h3{font-size: 6vw; margin-bottom:40px}
+    footer .inner .rightbox p{font-size: 2vw;}
+    footer .inner .rightbox p span{font-size: 2vw;}
+}
+
+
+
+
+@media screen and (min-width:350px) and (max-width:499px) {
+
+    .visual .inner .title_box h3{font-size: 8vw;}
+
+    .months .inner{width: 95%;}
+    .months .inner .main{font-size: 5.5vw;}
+    .months .inner .sub_1{font-size: 2.5vw;}
+    .months .inner .sub_2 p {font-size: 2.5vw;}
+    .months div.marquee{padding: 10px 20px;}
+
+
+    .Publishing .titlebox h2{font-size: 9vw;}
+    .Publishing .titlebox p{font-size: 1.5vw;}
+
+    .Publishing .inner ul.list li:nth-child(1){width: 100%;}
+    .Publishing .inner ul.list li:nth-child(2){width: 100%; left: 10%; top: 5%;}
+    .Publishing .inner ul.list li:nth-child(3){width: 100%; left: 7%; top: 13%;}
+    .Publishing .inner ul.list li:nth-child(4){width: 100%; top: 24%; left: 4%;}
+    .Publishing .inner ul.list li:nth-child(5){width: 100%; left: 10%; top: 32%;}
+    .Publishing .inner ul.list li:nth-child(6){width: 100%; top: 41%;}
+    .Publishing .inner ul.list li:nth-child(7){width: 100%;  left: 12%; top: 50%;}
+    .Publishing .inner ul.list li:nth-child(8){width: 100%; left: 1%; top: 57%;}
+    .Publishing .inner ul.list li:nth-child(9){width: 100%;  left: 5%; top: 62%;}
+    .Publishing .inner ul.list li:nth-child(10){width: 100%; left: 1%; top: 70%; }
+
+    .Publishing .inner ul.list li div.textbox p span{padding: 5px; font-size: 11px;}
+
+
+    .ncs .inner .titlebox{margin: 0 auto 150px;}
+    .ncs .inner .titlebox h2{font-size: 9vw;}
+    .ncs .inner .titlebox p{font-size: 1.5vw;}
+    .ncs .inner .swiper .swiper-wrapper .swiper-slide {width: 50%;}
+    .ncs .inner .edu {font-size: 1vw; margin: 150px auto 0; width: 95%;}
+    .ncs .inner .edu .edu_list div.text{padding-left: 0px;}
+    .ncs .inner .edu .edu_list div.text.on{height: 10%; line-height: 25px;}
+    
+
+
+
+    footer { margin-top: 0px; padding: 200px 0 50px; height: auto;}
+    footer .inner{flex-wrap: wrap; width: 90%; margin: 0 auto;}
+    footer .inner .leftbox{width: 100%;}
+    footer .inner .leftbox h3{font-size: 7vw;}
+
+    footer .inner .rightbox{width: 100%; margin-top: 100px; text-align: right;}
+    footer .inner .rightbox span{font-size: 2vw;}
+
+    footer .inner .leftbox h3 span.linebox{width: 23%; left: 20%;}
+    footer .inner .rightbox h3{font-size: 6vw; margin-bottom:40px}
+    footer .inner .rightbox p{font-size: 2vw;}
+    footer .inner .rightbox p span{font-size: 2vw;}
+}
+
+
+
+
+/* 메뉴 반응형 */
+@media screen and (max-width:850px) {
+    header .menu_open ul.list{width: 100%;}
+    header .menu_open ul.list li{font-size: 65px;}
+}

@@ -1,0 +1,227 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css2?family=Arapey:ital@0;1&family=Noto+Sans+KR:wght@300;400;500;600;700&display=swap');
+
+
+/* reset */
+* {margin: 0;padding: 0; box-sizing: border-box;}
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, tbody, tfoot, thead, tr, th, td{margin:0;padding:0;}
+h1, h2, h3, h4, h5, h6 {font-weight: normal; font-size: inherit;}
+a {color: inherit; text-decoration: inherit;}
+img {vertical-align: middle;}
+a img {border: none;}
+li {list-style: none;}
+address, em, i {font-style: normal;}
+a:focus {outline: none}
+button:focus {outline: none}
+
+
+
+body{font-family:'Switzer-Regular';  }
+.en{font-family: 'Stolzl-Regular';}
+.en2{font-family: 'Stolzl-Book';}
+.en3{font-family: 'Switzer-Bold';}
+.en4{font-family: 'Cormorant-Bold';}
+.en5{font-family: 'Bodidota';}
+.en6{font-family: 'Arapey', serif;}
+
+.wrap{width: 100%;  overflow: hidden; }
+
+
+
+
+header{width: 100%;  height: 100px; line-height: 100px; position: fixed; z-index: 100; }
+header .inner{width: 90%; height: 100%;  margin: 0 auto; overflow: hidden; }
+header .inner .logobox{width: 50px; height:50px; float: left;}
+header .inner .logobox a{display: block; width: 100%; height: 100%; }
+header .inner .logobox a img{width: 100%; height: 100%; }
+
+header .inner .menubox{float: right;}
+header .inner .menubox a{display: block; width: 27px; height: 27px;}
+header .inner .menubox a img{transition: all .5s; width: 100%; height: 100%;}
+header .inner .menubox a:hover img{transform: scale(1.2);}
+
+
+
+header .menu_open {width: 100%; height: 100vh; background-color: #262626; position: fixed; left: 0; top: -300%; transition: all 1s;}
+/* 메뉴 창 클릭시 on부분 스타일 */
+header .menu_open.on{top:0; transition: all .6s;}
+
+header .menu_open div.close{width: 30px; height: 30px; position: absolute; right:25%; top: 12%;}
+header .menu_open div.close a{display: block; position: relative; z-index: 1000;}
+header .menu_open div.close a img{ width: 100%; height: 100%; display: block;  transition: all .5s;}
+header .menu_open div.close a:hover img{transform: rotate(360deg) scale(1.2); }
+
+
+header .menu_open ul.list{width: 50%;  text-align: center; position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); z-index: 500; color: white;} 
+header .menu_open ul.list li{width: 100%; font-size: 80px; text-align: center; }
+header .menu_open ul.list li a{display: inline-block; }
+
+
+
+
+
+
+
+/* 메뉴 호버 부분 */
+
+header .menu_open ul.list li a{  
+    overflow: hidden;
+    position: relative;
+    display: inline-block;
+
+}
+header .menu_open ul.list li a::before, a::after{
+    content: '';
+    position: absolute;
+    width: 100%;
+    left: 0;
+}
+
+header .menu_open ul.list li a::before {
+    background-color: #42B5F9;
+    height: 2px;
+    bottom: 0;
+    transform-origin: 100% 50%;
+    transform: scaleX(0);
+    transition: transform .3s ;
+    /* transition: transform .3s cubic-bezier(0.76, 0, 0.24, 1); */
+}
+
+
+header .menu_open ul.list li a::after {
+    content: attr(data-replace); 
+    /* attr(data-replace)는 해당 요소의 data-replace 속성 값을 가져와서 콘텐츠로 사용하는 것을 의미합니다. */
+    height: 100%;
+    top: 0;
+    transform-origin: 100% 50%;
+    transform: translate3d(200%, 0, 0);
+    transition: transform .3s;
+    color: #42B5F9;
+}
+
+
+
+header .menu_open ul.list li a:hover::before {
+    transform-origin: 0% 50%;
+    transform: scaleX(1);
+}
+header .menu_open ul.list li a:hover::after {
+    transform: translate3d(0, 0, 0);
+}
+
+header .menu_open ul.list li a p {
+    display: inline-block;
+    transition: transform .3s ;
+}
+header .menu_open ul.list li a:hover p {
+    transform: translate3d(-100%, 0, 0);
+}
+
+
+
+
+
+
+
+
+.main{width: 100%; height: 100vh; position: relative; background: url(../img/INDEX/gray_bg.png); background-repeat: no-repeat; background-size: cover; background-position: center;}
+.main .inner{width: 100%; height: 100%; margin: 0 auto; position: relative;}
+
+
+/* titlebox 부분*/
+.main .inner .titlebox{width: 90%; margin: 0 auto; position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); opacity: 1;}
+.main .inner .titlebox h2{width: 100%; font-size: 10.5vw; color: white; font-weight: bold; text-align: center;}
+.main .inner .titlebox h4{width: 100%; font-size: 20px; color: white;  margin-left: auto; margin-bottom: 100px; text-align: center;  }
+.main .inner .titlebox p{color: white; width: 10%; font-size: 20px;  position: absolute; left: 45%; top: 120%;  transform: rotate(90deg)}
+.main .inner .titlebox p span{display: inline-block; width: 50px; height: 2px; background-color: white; position: absolute; top: 50%; left: 45%;}
+
+
+.main .inner .imgbox{width: 100%; height: 100%; position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); z-index: -1;}
+.main .inner .imgbox img{width: 100%; height: 100%; filter: brightness(20%);}
+
+/*main.title 애니메이션 */
+.main .inner .titlebox p{animation-name: jump; animation-duration: 1s; animation-iteration-count: infinite;}
+@keyframes jump{
+    0%{top: 110%;}
+}
+
+
+
+/*slidr_box 부분*/
+.slide_box{width: 100%; position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); opacity: 0;}
+.slide_box ul{width: 90%; ; margin: 0 auto; }
+.slide_box ul li{width: 32%;  margin: 50px; position: relative; opacity: 0.3;}
+.slide_box ul li img{width: 100%;  }
+
+/* slide 센터 일때 효과 */
+.slick-center img{transform: scale(1.4); transition: all .5s; }
+.slide_box ul li.slick-center{opacity: 1;}
+
+
+
+.slide_box .textbox{width: 100%; margin-top: -4%; position: relative; z-index: 3; }
+.slide_box .textbox h2{width: 100%; overflow: hidden; }
+.slide_box .textbox h2 span{display: block; font-size: 120px; font-weight: bold; color: #42B5F9; text-align: center; margin: 0 auto 20px;}
+.slide_box .textbox p.eng{color: white; font-size: 20px; text-align: center; margin-bottom: 10px;}
+.slide_box .textbox p.ko{color: white; font-size: 15px; text-align: center; margin-bottom: 50px;}
+.slide_box .textbox .link{width: 100%; text-align: center;}
+.slide_box .textbox .link a{display: inline-block; padding: 10px 20px;margin-right: 10px; background-color: white;}
+.slide_box .textbox .link a:hover{background-color: #42B5F9; color: white;}
+
+/* 애니메이션 */
+.slide_box.motion .textbox h2 span{animation-name: slide-up; animation-duration: 5s; }
+
+@keyframes slide-up{
+    0%{transform: translateY(100%); }
+}
+
+
+
+
+
+
+/* 반응형 */
+@media screen and (max-width:1300px) {
+    .main .inner .titlebox p span{left: 90%;}
+    .slide_box ul{width: 95%;}
+    .slide_box ul li{width: 100%; margin: 50px;}
+    .slide_box ul li img{width: 100%; }
+    .slide_box .textbox{margin-top: -12%;}
+    .slick-center img{transform: scale(1)}
+}
+
+
+
+
+
+@media screen and (max-width:800px) {
+    .main .inner .titlebox{width: 100%;}
+    .main .inner .titlebox h2{font-size: 10.5vw;}
+    .main .inner .titlebox p span{left: 100%;}
+
+    .slide_box ul li{ height: auto;}
+    .slide_box .textbox h2 span{font-size: 10vw;}
+    .slide_box .textbox{width: 90%; margin: 0 auto;}
+    .slide_box .textbox p.eng{font-size: 18px;}
+    .slide_box .textbox p.ko{font-size: 13px;}
+    .slide_box .textbox p.eng br.mo{display: none;}
+    .slide_box .textbox p.ko br.mo{display: none;}
+    .slick-center img{transform: scale(1)}
+}
+
+
+
+@media screen and (max-width:500px){
+    .main .inner .titlebox p span{left: 170%;}
+    .main .inner .titlebox h4{font-size: 15px;}
+    .slide_box .textbox p.eng{font-size: 15px;}
+    .slide_box .textbox p.ko{font-size: 12px;}
+}
+
+
+
+/* 메뉴 반응형 */
+@media screen and (max-width:850px) {
+    header .menu_open ul.list{width: 100%;}
+    header .menu_open ul.list li{font-size: 65px;}
+}
