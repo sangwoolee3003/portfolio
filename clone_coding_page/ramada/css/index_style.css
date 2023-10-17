@@ -1,0 +1,658 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+
+/* reset */
+* {margin: 0;padding: 0; box-sizing: border-box;}
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, tbody, tfoot, thead, tr, th, td{margin:0;padding:0;}
+h1, h2, h3, h4, h5, h6 {font-weight: 700; font-size: inherit;}
+a {color: inherit; text-decoration: inherit;}
+img {vertical-align: middle;}
+a img {border: none;}
+li {list-style: none;}
+address, em, i {font-style: normal;}
+a:focus {outline: none}
+button:focus {outline: none}
+
+body{font-family: 'PT Serif', serif; font-size: 15px; transition: all 0.4s;}
+.wrap{overflow: hidden; }
+
+body.on{background-color:#bcbab4;  transition: all 0.4s;}
+body.on .banquet .textbox h4{color: black;}
+body.on .banquet .textbox p{color: #fff;}
+
+@keyframes slideup1{
+    0%{opacity: 0; transform: translateY(50px);}
+    30%{opacity: 0; transform: translateY(50px);}
+}
+
+
+@keyframes slideup2{
+    0%{opacity: 0; transform: translate(97%, -50%);}
+    30%{opacity: 0; transform: translate(97%, -50%);}
+}
+
+@keyframes slideup3{
+    0%{opacity: 0; transform: translateY(-50%);}
+    30%{opacity: 0; transform: translateY(-50%);}
+}
+
+@keyframes leftslide {
+    0%{transform: translateX(-150%);}
+    }
+
+
+@keyframes rightslide {
+    0%{transform: translateX(150%);}
+}
+
+@keyframes textani{
+    0%{opacity: 0;} 
+    30%{opacity: 0;} 
+}
+
+
+
+
+
+/* @keyframes slideside{
+    0%{transform: translateX(0%);}
+    33%{transform: translateX(-100%);}
+    66%{transform: translateX(-200%);}
+    99%{transform: translateX(-200%);}
+} */
+
+
+
+
+
+/* 헤더 부분 */
+header{width: 100%; padding: 10px 0;  color: rgb(255, 255, 255);  background-color: #000000; position:fixed;  z-index: 1; }
+header .inner{width: 1600px;   height: 80px; margin: 0 auto;}
+header .inner ul{width: 100%; display: flex; justify-content: space-between;}
+header .inner ul li:nth-child(1){width: 100px; height: 80px; line-height: 80px;  text-align: center; font-size: 50px; }
+header .inner ul li:nth-child(2){width: 70%; height: 80px; text-align: center; margin-left: 90px;  }
+header .inner ul li:nth-child(3){width: 80px; height: 80px; line-height: 80px;  text-align: center; }
+header .inner ul li:nth-child(4){width: 80px; height: 80px; line-height: 80px; text-align: center; }
+
+
+header .inner ul li:nth-child(2) h1{font-size: 30px; color: #B92A4B; }
+header .inner ul li:nth-child(2) p{font-size: 7px; letter-spacing: 2px; color: #B92A4B;  font-weight: 600;}
+header .inner ul li:nth-child(2) span{font-size: 12px; color: gray; }
+
+/* header .inner ul li:nth-child(2) p.img{width: 290px; height: 120px; margin: 0 0 0 525px;}
+header .inner ul li:nth-child(2) p.img img{width: 100%;} */
+
+
+
+/* 헤더 gnb 부분 */
+.gnb{position: absolute; background-color: #000; left: -300%;  top: 0; padding: 50px 80px; height: 100vh; transition: all 0.8s; color: #666;  }
+
+.gnb.on{left: 0; transition: all 0.8s;  z-index: 100; }
+
+
+.gnb .close{display: block; font-size: 50px; color: white; margin-bottom: 30px; text-align: left;}
+.gnb ul li.mainname{font-size: 25px; color: #B92A4B; font-weight: bold; margin-top: 30px; margin-bottom: 15px;}
+.gnb ul li.subname{font-size: 15px; color: white; margin-bottom: 10px; font-family:'Noto Sans KR', sans-serif;  }
+.gnb ul li a{display: block; transition: all 0.5s;}
+.gnb ul li.subname:hover a{font-size: 20px; text-decoration: underline; color:#737373; }
+
+
+
+
+/* Mainimg 부분 */
+.mainimg{width: 100%;   position: relative;}
+.mainimg .mainimgbox{width: 100%; margin: 0 auto; display: flex; overflow: hidden;}
+.mainimg .mainimgbox p.img{width: 100%; height: 90vh;}
+.mainimg .mainimgbox p.img img.hotelimg{width: 100%; height: 100%;}
+
+
+
+.mainimg .maintextbox{width: 1200px; margin: 0 auto; position: absolute; left: 50%; top: 50%; transform: translate(-50%, -15%);}
+.mainimg .maintextbox h2{font-size: 2.5vw; width: 100%; text-align: center; margin-bottom: 171px; color: white;}
+
+.mainimg .maintextbox h2 span.char{ animation: textani 1s both; animation-delay: calc(0.08s * var(--char-index));}
+
+.mainimg .maintextbox ul{font-size: 20px; width: 100%; display: flex;  margin: 0 auto;  }
+
+.mainimg .maintextbox ul li{width: 12%;   border-right: 1px solid #fefefe; }
+/* .mainimg .maintextbox ul li p{font-size: 12px;} */
+
+/* .mainimg .maintextbox ul li:nth-child(1){margin-right: 29px; padding-right: 25px; border-right: 1px solid white;} */
+/* .mainimg .maintextbox ul li:nth-child(2){margin-right: 29px; padding-right: 25px; border-right: 1px solid white;} */
+/* .mainimg .maintextbox ul li:nth-child(3){margin-right: 29px; padding-right: 25px; border-right: 1px solid white;} */
+/* .mainimg .maintextbox ul li:nth-child(4){margin-right: 29px; padding-right: 25px; border-right: 1px solid white;} */
+/* .mainimg .maintextbox ul li:nth-child(5){margin-right: 46px; padding-right: 25px;} */
+.mainimg .maintextbox ul li p.listtext{color: white; margin-bottom: 20px; text-align: center; font-size: 0.8vw;}
+.mainimg .maintextbox ul li p.subtext{color: white; text-align: center; font-family: 'Noto Sans KR', sans-serif; font-size: 0.8vw; }
+.mainimg .maintextbox ul li.search{width: 250px; height: 71px; line-height: 71px; text-align: center;  color: white; border: 1px solid white; margin-left: 69px; font-size: 0.8vw; }
+.mainimg .maintextbox ul li.search a{display: block;}
+
+/* mainimg호버 부분 */
+.mainimg .maintextbox ul li:nth-child(6):hover{background-color: #B92A4B; }
+.mainimg .maintextbox a.mo{display: none;}
+
+
+
+
+/* accommodation 부분 */
+.accommodation{width: 100%; padding: 89px 0 120px 0;}
+.accommodation .inner{width: 1920px; margin: 0 auto;  position: relative;}
+.accommodation .inner h3{font-size: 30px; color: #B92A4B;  text-align: center; margin-bottom: 78px; }
+.accommodation .inner .roomlist ul{width: 100%; display: flex;  }
+.accommodation .inner .roomlist ul li{width: 100%; margin-right: 530px; position: relative;  }
+.accommodation .inner .roomlist ul li p.img{width: 1200px; height: 520px;}
+.accommodation .inner .roomlist ul li p.img img{width: 100%; height: 100%;}
+
+.accommodation .inner .roomlist .textbox{width: 500px; height: 300px; background-color: #B92A4B; position: absolute; left: 60%; top: 25%; }
+.accommodation .inner .roomlist .textbox h4{color: white; font-size: 30px; padding: 30px 318px 20px 58px ;}
+.accommodation .inner .roomlist .textbox p{color: white; padding: 0 51px 59px 55px; font-family: 'Noto Sans KR', sans-serif;}
+
+.accommodation .inner .roomlist .textbox a.more{display: inline-block; width: 150px; height: 50px;  line-height: 50px; text-align: center; background-color: #C6C6C6; margin: 0  18px 30px 51px; color: white; font-weight: bold;}
+.accommodation .inner .roomlist .textbox a.reservtion{display: inline-block; width: 150px; height: 50px;  line-height: 50px; text-align: center; background-color:#C6C6C6; color: #B92A4B; font-weight: bold; }
+
+.accommodation .inner .morebox{width: 90px; font-weight: bold; color: #B92A4B; position: absolute; right: 30px; top: 20px;}
+.accommodation .inner .morebox i{margin-left: 5px;}
+
+
+.accommodation .inner .roomlist .textbox a.more:hover{background-color: black;  box-shadow: 1px 1px 5px grey;}
+.accommodation .inner .roomlist .textbox a.reservtion:hover{background-color: black; color: white; box-shadow: 1px 1px 5px grey;}
+
+
+/* accomodation slide arrow&circle css부분 */
+.bx-wrapper{position: relative;}
+.bx-controls-direction{font-size: 100px;}
+.bx-controls-direction a{position: absolute; top: 45%; transform: translateY(-45%); display: block; width: 39px; height: 120px; overflow: hidden;}
+
+.bx-controls-direction .bx-prev{left: 50px;}
+.bx-controls-direction .bx-next{right: 50px;}
+
+.bx-controls-direction .bx-prev::before{content: '\f104 '; font-family: fontawesome; font-size: 50px; padding-left: 5px;  } 
+.bx-controls-direction .bx-next::before{content: '\f105 '; font-family: fontawesome; font-size: 50px; padding-right: 5px; }
+
+
+.bx-pager{position: absolute; left: 0; bottom: -20px; width: 100%;  text-align: center; }
+.bx-pager div{display: inline-block; margin: 0 5px;}
+.bx-pager div a{display: block; font-size: 0; width: 10px; height: 10px; border-radius: 50%; background-color: #999;}
+.bx-pager div a.bx-pager-link.active{background-color: #B92A4B;}
+.bx-controls-direction .bx-next {color: #B92A4B;}
+.bx-controls-direction .bx-prev {color: #B92A4B;}
+
+/* .bx-controls-direction a.bx-prex{position: absolute; left: 0; top: 0;} */
+
+
+
+
+
+
+
+
+
+
+
+
+section.dining2{display: none;}
+/* DINING 부분 */
+/* 백그라운드 이미지는 높이가 없어서 padding이나 height로 높이 줘야함 */
+.dining{width: 100%;  padding: 104px 0 100px 0 ; background-image: url(../img/Background\ copy\ 1.png); background-repeat: no-repeat; background-size: cover; background-position: center; background-attachment: fixed;} 
+.dining .inner{width: 1400px; margin: 0 auto;  position: relative;}
+.dining .inner h3{width: 100%; font-size: 30px; color: #B92A4B;  text-align: center; margin-bottom: 141px;}
+
+
+.dining .inner ul{width: 100%; display: flex;  }
+.dining .inner ul li{width: 600px; height: 300px; position: relative; }
+.dining .inner ul li:nth-child(1){margin-right: 200px;}
+.dining .inner ul li p.img{width: 100%; }
+.dining .inner ul li p.img img{width: 100%; }
+
+.dining .inner ul li .subbox {z-index: 10; width: 100%;  position: absolute; bottom: 0;}
+.dining .inner ul li h4{width: 100%; padding: 24px 0 20px; text-align: center; color: white; }
+.dining .inner ul li p.textbox{width: 100%; height: 0px; opacity: 0; padding: 0 60px 0 60px; margin-bottom: 35px; color: white; transition: all .5s; font-family: 'Noto Sans KR', sans-serif;}
+.dining .inner ul li a{ display: block; width: 145px; height: 48px; line-height: 48px; text-align: center; font-weight: bold; margin: 0 auto 25px; color: white; border: 1px solid white;  font-family: 'Noto Sans KR', sans-serif; } 
+
+.dining .inner .morebox{width: 90px; font-weight: bold; color: #B92A4B; position: absolute; right: 0px; top: 20px; }
+.dining .inner .morebox i{margin-left: 10px; }
+
+
+.dining .inner ul li.motion:nth-child(1){animation-name: leftslide; animation-duration: 1.5s; }
+.dining .inner ul li.motion:nth-child(2){animation-name: rightslide; animation-duration: 1.5s; }
+
+
+/* DINING호버 부분 */
+.dining .inner ul li .subbox::before{
+    bottom: 0;
+    content: '';
+    position: absolute;
+    bottom: 0; 
+    left: 0;
+    right: 0;
+    height: 100%;
+    z-index: -1;
+    background: #474747;
+    opacity: 0.8;}
+
+
+.dining .inner ul li:hover .subbox::before{ background-color: #B92A4B; opacity: 0.8; }
+.dining .inner ul li:hover p{height: 80px; opacity: 1;}
+.dining .inner ul li a:hover{background-color: white; color: #B92A4B;}
+
+
+
+
+
+
+
+/* BANQUET 부분 */
+
+.banquet .inner2{display: none;}
+
+.banquet{width: 100%;  padding: 98px 0;}
+.banquet .inner{width: 1400px;  margin: 0 auto;  position: relative;}
+.banquet .inner h3{width: 100%; font-size: 30px; color: #B92A4B;  text-align: center; margin-bottom: 108px; }
+
+.banquet .inner .banquetlist{width: 100%;  }
+.banquet .inner .banquetlist ul {width: 100%;  position: relative; }
+
+
+.banquet .inner .banquetlist ul li.conferenceroom{width: 650px; }
+.banquet .inner .banquetlist ul li.conferenceroom a{display: block; width: 650px; height: 550px; }
+.banquet .inner .banquetlist ul li.conferenceroom a p.img{width: 100%; height: 100%; position: relative;}
+.banquet .inner .banquetlist ul li.conferenceroom a p.img img{width: 100%; height: 100%;}
+.banquet .inner .banquetlist ul li.conferenceroom .textbox{width: 650px; }
+.banquet .inner .banquetlist ul li.conferenceroom .textbox h4{padding: 18px 0; text-align: center; font-size: 25px; }
+.banquet .inner .banquetlist ul li.conferenceroom .textbox p{text-align: center; font-family: 'Noto Sans KR', sans-serif;}
+
+
+.banquet .inner .banquetlist ul li.maple{width: 760px; transform: translate(97%, -70%); }
+.banquet .inner .banquetlist ul li.maple a{display: block; width: 760px; height: 550px; }
+.banquet .inner .banquetlist ul li.maple p.img{width: 100%; height: 100%; position: relative; }
+.banquet .inner .banquetlist ul li.maple a p.img img{width: 100%; height: 100%;}
+.banquet .inner .banquetlist ul li.maple .textbox{width: 760px; }
+.banquet .inner .banquetlist ul li.maple .textbox h4{padding: 18px 0; text-align: center; font-size: 25px; }
+.banquet .inner .banquetlist ul li.maple .textbox p{text-align: center; font-family: 'Noto Sans KR', sans-serif;}
+
+
+
+.banquet .inner .banquetlist ul li.Ballroom{width: 1200px; transform: translateY(-70%); }
+.banquet .inner .banquetlist ul li.Ballroom a{display: block; width: 1200px; height: 400px; }
+.banquet .inner .banquetlist ul li.Ballroom p.img{width: 100%; height: 100%; position: relative;}
+.banquet .inner .banquetlist ul li.Ballroom a p.img img{width: 100%; height: 100%;}
+.banquet .inner .banquetlist ul li.Ballroom .textbox{width: 524px; }
+.banquet .inner .banquetlist ul li.Ballroom .textbox h4{padding: 18px 0;  text-align: left; font-size: 25px; }
+.banquet .inner .banquetlist ul li.Ballroom .textbox p{text-align: left; font-family: 'Noto Sans KR', sans-serif;}
+
+
+
+
+
+.banquet .inner .banquetlist ul li.oak{width: 1100px; display: flex; position: absolute;right: 0; bottom: 0px; }
+.banquet .inner .banquetlist ul li.oak .textbox{width: 524px; margin-right: 35px;}
+.banquet .inner .banquetlist ul li.oak a{display: block; width: 550px; height: 400px; position: relative;}
+.banquet .inner .banquetlist ul li.oak .textbox h4{width: 100%; font-size: 25px; text-align: center; margin-top: 250px; padding-bottom: 18px; } 
+.banquet .inner .banquetlist ul li.oak .textbox p{width: 100%; text-align: center; font-family: 'Noto Sans KR', sans-serif;}
+
+.banquet .inner .morebox{width: 90px; font-weight: bold; color: #B92A4B; position: absolute; right: 0; top: 20px;}
+.banquet .inner .morebox i{margin-left: 10px;}
+
+
+/* BANQUET 부분 애니메이션 */
+.banquet .inner .banquetlist ul li:nth-child(1).motion{animation-name: slideup1; animation-duration: 1.5s;}
+.banquet .inner .banquetlist ul li:nth-child(2).motion{animation-name: slideup2; animation-duration: 1.5s;}
+.banquet .inner .banquetlist ul li:nth-child(3).motion{animation-name: slideup3; animation-duration: 1.5s;}
+.banquet .inner .banquetlist ul li:nth-child(4).motion{animation-name: slideup1; animation-duration: 1.5s;}
+
+/*BANQUET 부분 호버 */
+.banquet .inner .banquetlist ul li.conferenceroom a p.img::before{content: ''; width: 100%; height: 100%; background-color: white; opacity: 0; position: absolute; left: 0; top: 0; transition: all 0.8s;}
+.banquet .inner .banquetlist ul li.conferenceroom a p.img::after{content: '자세히 보기'; opacity: 0; background-color: white; font-size: 15px; padding: 30px 104px; color: #B92A4B; font-weight: bold; position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); font-family: 'Noto Sans KR', sans-serif; transition: all 0.8s;}
+.banquet .inner .banquetlist ul li.conferenceroom a:hover p.img::before{opacity: 0.7;}
+.banquet .inner .banquetlist ul li.conferenceroom a:hover p.img::after{opacity: 1;}
+
+
+.banquet .inner .banquetlist ul li.maple a p.img::before{content: ''; width: 100%; height: 100%; background-color: white; opacity: 0; position: absolute; left: 0; top: 0; transition: all 0.8s;}
+.banquet .inner .banquetlist ul li.maple a p.img::after{content: '자세히 보기'; opacity: 0; background-color: white; font-size: 15px; padding: 30px 104px; color: #B92A4B; font-weight: bold; position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); font-family: 'Noto Sans KR', sans-serif; transition: all 0.8s;}
+.banquet .inner .banquetlist ul li.maple a:hover p.img::before{opacity: 0.7;}
+.banquet .inner .banquetlist ul li.maple a:hover p.img::after{opacity: 1;}
+
+.banquet .inner .banquetlist ul li.Ballroom a p.img::before{content: ''; width: 100%; height: 100%; background-color: white; opacity: 0; position: absolute; left: 0; top: 0;transition: all 0.8s;}
+.banquet .inner .banquetlist ul li.Ballroom a p.img::after{content: '자세히 보기'; opacity: 0; background-color: white; font-size: 15px; padding: 30px 104px; color: #B92A4B; font-weight: bold; position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); font-family: 'Noto Sans KR', sans-serif; transition: all 0.8s;}
+.banquet .inner .banquetlist ul li.Ballroom a:hover p.img::before{opacity: 0.7;}
+.banquet .inner .banquetlist ul li.Ballroom a:hover p.img::after{opacity: 1;}
+
+.banquet .inner .banquetlist ul li.oak a p.img::before{content: ''; width: 100%; height: 100%; background-color: white; opacity: 0; position: absolute; left: 0; top: 0; transition: all 0.8s;}
+.banquet .inner .banquetlist ul li.oak a p.img::after{content: '자세히 보기'; opacity: 0; background-color: white; font-size: 15px; padding: 30px 100px; color: #B92A4B; font-weight: bold; position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%);font-family: 'Noto Sans KR', sans-serif; transition: all 0.8s;}
+.banquet .inner .banquetlist ul li.oak a:hover p.img::before{opacity: 0.7;}
+.banquet .inner .banquetlist ul li.oak a:hover p.img::after{opacity: 1;}
+
+
+
+
+
+/* location 부분 */
+.location{width: 100%; padding: 134px 0; }
+.location .inner{width: 1200px; margin: 0 auto;  position: relative; }
+.location .inner h3{width: 100%; font-size: 30px; color: #B92A4B;  text-align: center; margin-bottom: 90px; }
+.location .inner a{width: 100%;  display: block; }
+.location .inner a p.img{width: 100%; height: 100%; position: relative;  }
+.location .inner a p.img img{width: 100%; height: 100%; }
+
+.location .inner .info1{width: 200px; height: 350px; background-color: aliceblue; position: absolute; left: 40px; top: 200px;}
+.location .inner .info1 p.img{width: 200px; height: 100px; padding-top: 20px; }
+.location .inner .info1 p.img img{width: 100%; height: 60%; }
+
+.location .inner .info1 ul li{width: 100%; margin-bottom: 30px; padding-left: 30px;}
+.location .inner .info1 ul li h5{margin-bottom: 10px;  color: #474747; font-family: 'Noto Sans KR', sans-serif;}
+.location .inner .info1 ul li p{font-size: 13px; font-family: 'Noto Sans KR', sans-serif;}
+
+
+
+.location .inner .info2{width: 100%; margin-top: 115px; }
+.location .inner .info2 h4{font-size: 25px; font-family: 'Noto Sans KR', sans-serif; margin-bottom: 45px;}
+.location .inner .info2 ul{width: 100%; overflow: hidden;}
+.location .inner .info2 ul li h5{margin-bottom: 30px;}
+.location .inner .info2 ul li p i{font-size: 5px; margin: 0 20px;}
+.location .inner .info2 ul li:nth-child(1){float: left; margin-right: 40px; font-family: 'Noto Sans KR', sans-serif;}
+.location .inner .info2 ul li:nth-child(2){float: left; margin-right: 40px; font-family: 'Noto Sans KR', sans-serif;} 
+.location .inner .info2 ul li:nth-child(3){float: right; font-family: 'Noto Sans KR', sans-serif;} 
+
+.location .inner .morebox{width: 90px; font-weight: bold; color: #B92A4B; position: absolute; right: -20px; top: 20px;}
+.location .inner .morebox i{margin-left: 10px;}
+
+
+
+/* location 호버 */
+.location .inner a p.img::before{content: ''; width: 100%; height: 100%; background-color: #474747; opacity: 0; position: absolute; left: 0; top: 0; transition: all 0.8s;}
+.location .inner a:hover p.img::before{opacity: 0.7;}
+
+.location .inner a p.img::after{content: '\f3c5'; font-size: 50px; color: white;  opacity: 0; position: absolute; left: 50%; top: 50%; transform: translate(-50%,-50%); font-family: fontawesome ; transition: all 0.8s;}
+.location .inner a:hover p.img::after{opacity: 1;}
+
+
+
+
+/* footer 부분 */
+footer{width: 100%; background-color: #B9B9B9; padding: 30px 0;}
+footer .inner{width: 1600px; margin: 0 auto;}
+footer .inner p{text-align: center; line-height: 1.8; color: #737373; font-family: 'Noto Sans KR', sans-serif;}
+
+
+
+
+
+
+
+
+
+
+/* 반응형 */
+@media screen and (max-width:1700px){
+    header .inner{width: 100%;}
+
+    /* .mainimg .maintextbox h2{font-size: 40px;} */
+    /* .mainimg .maintextbox ul {width: 90%; } */
+    .accommodation .inner{width: 100%;}
+    section.dining2{display: none;}
+    footer .inner {width: 100%;}
+    footer .inner p {font-size: 1vw;}
+
+}
+
+
+
+
+/* 1200~850 */
+@media screen and (min-width:850px) and (max-width: 1200px) {
+    header .inner {width: 90%;}
+    header .inner ul li:nth-child(2) p.img {margin: 0 0 0 365px;}
+
+
+
+    .mainimg .maintextbox{width: 90%; margin: 0 auto; }
+    /* .mainimg .maintextbox h2{font-size: 30px;} */
+    /* .mainimg .maintextbox ul{width: 90%;} */
+    /* .mainimg .maintextbox ul li{font-size: 15px;} */
+    .mainimg .maintextbox ul li:nth-child(5) {margin-right: -5%;}
+
+    .accommodation .inner{width: 90%;}
+    .accommodation .inner h3{text-align: left;}
+    /* .accommodation .inner .roomlist ul {flex-wrap: wrap; }
+    .accommodation .inner .roomlist ul li {margin-bottom: 50px;} */
+    .accommodation .inner .roomlist .textbox{ width: 41vw; left: 45%; top: 40%; height: 314px; }
+    .accommodation .inner .roomlist .textbox h4 {font-size: 3vw;}
+    .accommodation .inner .roomlist .textbox p {font-size: 1.5vw;}
+    .accommodation .inner .roomlist .textbox a.reservtion {width: 110px; font-size: 12px;}
+    .accommodation .inner .roomlist .textbox a.more{width: 110px; font-size: 12px;}
+
+    
+
+
+    section.dining2{display: none;}
+    .dining .inner {width: 90%;}
+    .dining .inner h3{text-align: left;}
+    .dining .inner ul li:nth-child(1) {margin-right: 67px;}
+    .dining .inner ul li p.img img{height: 300px ;}
+    .dining .inner ul li p.textbox{font-size: 1vw;}
+
+
+
+
+
+/* banquet 부분 재정의함 기존 pc버전 숨기고 숨겨져 있던 태블릿버전 나타냄*/
+.banquet .inner {display: none; }
+
+/* .banquet{width: 100%; padding: 98px 0; } */
+.banquet .inner2{width: 90%;  margin: 0 auto;  position: relative;}
+.banquet .inner2 h3{width: 100%; font-size: 30px; color: #b92a4b; margin-bottom: 108px; text-align: left;}
+
+.banquet .inner2 {display: block;}
+.banquet .inner2 ul{width: 100%; }
+.banquet .inner2 ul li{width: 600px; height: 400px; margin: 0 auto; margin-bottom: 20px;}
+.banquet .inner2 ul li:nth-child(1){position: relative;}
+.banquet .inner2 ul li:nth-child(2){position: relative;}
+.banquet .inner2 ul li:nth-child(3){position: relative;}
+.banquet .inner2 ul li:nth-child(4){position: relative;}
+.banquet .inner2 ul li a{display: block; width: 100%; height: 100%;}
+.banquet .inner2 ul li a p.img2{width: 100%; height: 100%; }
+.banquet .inner2 ul li a p.img2 img{width: 100%; height: 100%;}
+
+.banquet .inner2 .morebox2{width: 90px; font-weight: bold; color: #B92A4B; position: absolute; right: 0; top: 20px;}
+.banquet .inner2 .morebox2 i{margin-left: 10px;}
+
+
+.banquet .inner2 ul li a::before{content: ''; width: 100%; height: 100%; background-color: white; opacity: 0; position: absolute; left: 0; top: 0; transition: all 0.8s}
+.banquet .inner2 ul li:hover a::before{opacity: 0.7;}
+
+
+.banquet .inner2 ul li:nth-child(1) a::after{content: 'Conference Room 보기'; display: block; width: 170px; height: 50px; line-height: 50px; text-align: center;  position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); font-family: 'Noto Sans KR', sans-serif; border: 1px solid white; color: #b92a4b; background-color: white; opacity: 0; font-weight: bold; font-size: 13px; transition: all 1s }
+.banquet .inner2 ul li:nth-child(2) a::after{content: 'Maple 보기'; display: block; width: 170px; height: 50px; line-height: 50px; text-align: center;  position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); font-family: 'Noto Sans KR', sans-serif; border: 1px solid white; color: #b92a4b; background-color: white; opacity: 0;font-weight: bold; font-size: 13px; transition: all 1s}
+.banquet .inner2 ul li:nth-child(3) a::after{content: 'Ballroom 보기'; display: block; width: 170px; height: 50px; line-height: 50px; text-align: center;  position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); font-family: 'Noto Sans KR', sans-serif; border: 1px solid white; color: #b92a4b; background-color: white; opacity: 0;  font-weight: bold; font-size: 13px; transition: all 1s}
+.banquet .inner2 ul li:nth-child(4) a::after{content: 'Oak 보기'; display: block; width: 170px; height: 50px; line-height: 50px; text-align: center;  position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); font-family: 'Noto Sans KR', sans-serif; border: 1px solid white; color: #b92a4b; background-color: white; opacity: 0; font-weight: bold; font-size: 13px; transition: all 1s}
+
+.banquet .inner2 ul li:nth-child(1):hover a::after{opacity: 1;}
+.banquet .inner2 ul li:nth-child(2):hover a::after{opacity: 1;}
+.banquet .inner2 ul li:nth-child(3):hover a::after{opacity: 1;}
+.banquet .inner2 ul li:nth-child(4):hover a::after{opacity: 1;}
+
+
+.location .inner .info1 {left: 5%; top: 12%;}
+.location .inner{width: 90%;}
+.location .inner h3{text-align: left;}
+.location .inner .info2 ul li {margin-bottom: 30px;}
+.location .inner .info2 ul li:nth-child(1){float: none;}
+.location .inner .info2 ul li:nth-child(2){float: none;}
+.location .inner .info2 ul li:nth-child(3){float: none;}
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+/* 675~849 */
+@media screen and (max-width:849px){
+
+    header .inner ul li:nth-child(3) p{display: none;}
+    header .inner ul li:nth-child(4) p{display: none;}
+
+    header .inner ul li:nth-child(2) {margin-left:13%}
+    header .inner ul li:nth-child(1) {font-size: 35px;}
+    
+
+
+    .mainimg .maintextbox ul {width: 59%;}
+
+
+    .accommodation .inner {width: 90%;}
+    .accommodation .inner h3{text-align: left; margin-bottom: 108px;}
+    .accommodation .inner .roomlist .textbox p{display: none;}
+    .accommodation .inner .roomlist .textbox a.more{display: none;}
+    .accommodation .inner .roomlist .textbox a.reservtion{display: none;}
+    .accommodation .inner .roomlist .textbox {width: 300px; height: 100px; top: 0; left: 0;}
+    .accommodation .inner .roomlist .textbox h4{text-align: center; width: 100%; height: 100%; text-align: center; padding: 0; line-height: 100px;}
+
+
+    .bx-pager{z-index: -5;}
+    .accommodation .inner .morebox{z-index: -21;}
+
+
+
+
+
+    
+
+
+
+
+
+section.dining{display: none;}
+section.dining2{display: block;}
+.dining2  {width: 100%; margin-bottom: 150px; }
+.dining2 .inner2{width: 90% ; margin: 0 auto; position: relative;  }
+.dining2 .inner2 h3{width: 100%; font-size: 30px; color: #B92A4B;  text-align: left; margin-bottom: 108px;}
+.dining2 .inner2 ul{width: 100%;   }
+.dining2 .inner2 ul li{width: 100%;  position: relative;}
+.dining2 .inner2 ul li:nth-child(1) {margin-bottom: 180px;}
+.dining2 .inner2 ul li p.img{width: 100%; }
+.dining2 .inner2 ul li p.img img{width: 100%;}
+
+.dining2 .inner2 ul li .subbox.box1{width: 50%; padding: 30px 15px; background-color: #B92A4B; position: absolute; left: 20px; bottom: -135px;}
+.dining2 .inner2 ul li .subbox.box2{width: 50%; padding: 30px 15px; background-color: #B92A4B; position: absolute; right: 20px; bottom: -135px;}
+
+.dining2 .inner2 ul li .subbox h4{font-size: 25px; color: white; margin-bottom: 10px;}
+.dining2 .inner2 ul li .subbox p.textbox{font-size: 1vw; color: #ffffff; margin-bottom: 10px; font-family: 'Noto Sans KR', sans-serif; font-weight: 500;  margin-bottom: 20px;}
+.dining2 .inner2 ul li .subbox a{display: inline-block; font-family: 'Noto Sans KR', sans-serif; font-size: 12px; padding: 10px 15px; color: white; background-color: #6f6f6f; }
+.dining2 .inner2 ul li .subbox a:hover{background-color: #000;}
+
+.dining2 .inner2 .morebox2{width: 90px; font-weight: bold; color: #B92A4B; position: absolute; right: 0; top: 20px; }
+
+
+
+
+
+
+
+/* banquet 부분 재정의함 기존 pc버전 숨기고 숨겨져 있던 태블릿버전 나타냄*/
+.banquet .inner {display: none; }
+
+.banquet .inner2{width: 90%;  margin: 0 auto;  position: relative;}
+.banquet .inner2 h3{width: 100%; font-size: 30px; color: #b92a4b; margin-bottom: 108px; text-align: left;}
+
+.banquet .inner2 {display: block;}
+.banquet .inner2 ul{width: 100%; }
+.banquet .inner2 ul li{width: 600px; height: 400px; margin: 0 auto; margin-bottom: 20px;}
+.banquet .inner2 ul li:nth-child(1){position: relative;}
+.banquet .inner2 ul li:nth-child(2){position: relative;}
+.banquet .inner2 ul li:nth-child(3){position: relative;}
+.banquet .inner2 ul li:nth-child(4){position: relative;}
+.banquet .inner2 ul li a{display: block; width: 100%; height: 100%;}
+.banquet .inner2 ul li a p.img2{width: 100%; height: 100%; }
+.banquet .inner2 ul li a p.img2 img{width: 100%; height: 100%;}
+
+.banquet .inner2 .morebox2{width: 90px; font-weight: bold; color: #B92A4B; position: absolute; right: 0; top: 20px;}
+.banquet .inner2 .morebox2 i{margin-left: 10px;}
+
+
+
+.banquet .inner2 ul li a::before{content: ''; width: 100%; height: 100%; background-color: white; opacity: 0; position: absolute; left: 0; top: 0; transition: all 0.8s}
+.banquet .inner2 ul li:hover a::before{opacity: 0.7;}
+
+
+
+.banquet .inner2 ul li:nth-child(1) a::after{content: 'Conference Room 보기'; display: block; width: 170px; height: 50px; line-height: 50px; text-align: center;  position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); font-family: 'Noto Sans KR', sans-serif; border: 1px solid white; color: #b92a4b; background-color: white; opacity: 0; font-weight: bold; font-size: 13px; transition: all 1s }
+.banquet .inner2 ul li:nth-child(2) a::after{content: 'Maple 보기'; display: block; width: 170px; height: 50px; line-height: 50px; text-align: center;  position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); font-family: 'Noto Sans KR', sans-serif; border: 1px solid white; color: #b92a4b; background-color: white; opacity: 0;font-weight: bold; font-size: 13px; transition: all 1s}
+.banquet .inner2 ul li:nth-child(3) a::after{content: 'Ballroom 보기'; display: block; width: 170px; height: 50px; line-height: 50px; text-align: center;  position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); font-family: 'Noto Sans KR', sans-serif; border: 1px solid white; color: #b92a4b; background-color: white; opacity: 0;  font-weight: bold; font-size: 13px; transition: all 1s}
+.banquet .inner2 ul li:nth-child(4) a::after{content: 'Oak 보기'; display: block; width: 170px; height: 50px; line-height: 50px; text-align: center;  position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); font-family: 'Noto Sans KR', sans-serif; border: 1px solid white; color: #b92a4b; background-color: white; opacity: 0; font-weight: bold; font-size: 13px; transition: all 1s}
+
+.banquet .inner2 ul li:nth-child(1):hover a::after{opacity: 1;}
+.banquet .inner2 ul li:nth-child(2):hover a::after{opacity: 1;}
+.banquet .inner2 ul li:nth-child(3):hover a::after{opacity: 1;}
+.banquet .inner2 ul li:nth-child(4):hover a::after{opacity: 1;}
+
+
+
+
+.location .inner{width: 90%;}
+.location .inner h3{text-align: left;}
+.location .inner .info1 {display: none;}
+.location .inner .info2 ul li {margin-bottom: 30px;}
+.location .inner .info2 ul li:nth-child(1){float: none;}
+.location .inner .info2 ul li:nth-child(2){float: none;}
+.location .inner .info2 ul li:nth-child(3){float: none;}
+
+}
+
+
+
+
+
+
+
+
+
+
+
+/* 635~764 */
+@media screen and (max-width:764px){
+
+    .mainimg .maintextbox {width: 100%;}
+    .mainimg .maintextbox h2{font-size: 7vw;}
+    .mainimg .maintextbox ul{display: none;}
+    .mainimg .maintextbox a.mo{display: inline-block; padding: 20px 60px; background-color:transparent; font-weight: bold; color: white;  position: absolute; left: 50%; transform: translateX(-50%); border: 1px solid white;}
+    .mainimg .maintextbox a.mo:hover{background-color: #B92A4B;}
+    
+    
+    
+    
+    .accommodation .inner .roomlist ul li p.img{width: 100%}
+    .accommodation .inner .roomlist .textbox{width: 100%; top: 81%; }
+    .bx-controls-direction .bx-prev{left: -4px;}
+    .bx-controls-direction .bx-next{right: -7px;}
+
+
+    /* .dining2 .inner2 ul li .subbox.box1{position: none;} */
+    .accommodation .inner .morebox{position: static;}
+
+
+    .banquet .inner2 ul li{width: 100%;}
+}
+
+
+
+
+@media screen and (max-width:634px){
+    .dining2 .inner2 ul li .subbox.box1 {width: 100%; position: static;}
+    .dining2 .inner2 ul li .subbox.box2 {width: 100%; position: static;}
+
+    .location .inner .info2 ul li{font-size: 10px;}
+    .location .inner .info2 ul li p i {display: none;}
+
+    .gnb {padding: 50px 5px;}
+
+
+}

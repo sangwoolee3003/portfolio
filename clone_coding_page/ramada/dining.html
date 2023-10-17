@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/dining_style.css">
+    <link rel="stylesheet" href="css/slick.css">
+    <link rel="stylesheet" href="css/swiper-bundle.min.css">
+    <title>Document</title>
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/slick.min.js"></script>
+    <script src="js/swiper-bundle.min.js"></script>
+    <script src="js/scrolla.jquery.min.js"></script>
+    <script src="js/dining.js"></script>
+    <!-- <script src="js/dining_swiper.js"></script> -->
+    
+        <!-- 폰트어썸 -->
+        <script src="https://kit.fontawesome.com/6eaed53952.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="wrap">
+        <header>
+            <div class="inner">
+                <div class="leftbox">
+                    <div class="logotext">
+                        <a href="index.html">
+                            <h1>RAMADA</h1>
+                            <P>BY WYNDMAN</P>
+                            <span>SEOUL DONDAEMUN</span>
+                        </a>
+                    </div>
+                </div>
+                <div class="rightbox">
+                    <ul class="gnb">
+                        <li class="gnb_list1"><a href="#">Ramada Dongdaemun</a>
+                            <ul class="dept1">
+                                <li class="mainlist"><a href="#">Ramada Dongdaemun</a></li>
+                                <li class="sublist"><a href="#">호텔 소개</a></li>
+                                <li class="sublist"><a href="#">호텔 위치</a></li>
+                                <li class="sublist"><a href="#">사업 개요</a></li>
+                            </ul>
+                        </li>
+                        <li class="gnb_list2"><a href="accomodation_page.html">Accommodation</a>
+                            <ul class="dept2">
+                                <li class="mainlist"><a href="accomodation_page.html">Accommodation</a></li>
+                                <li class="sublist"><a href="accomodation_page.html">Superior</a></li>
+                                <li class="sublist"><a href="accomodation_page.html">Deluxe</a></li>
+                                <li class="sublist"><a href="accomodation_page.html">Suite</a></li>
+                            </ul>
+                        </li>
+                        <li class="gnb_list3"><a href="dining.html">Dining</a>
+                            <ul class="dept3">
+                                <li class="mainlist"><a href="dining.html">Dining</a></li>
+                                <li class="sublist"><a href="dining.html">The Kitchen Neul</a></li>
+                                <li class="sublist"><a href="dining.html">The Caffe R</a></li>
+                            </ul>
+                        </li>
+                        <li class="gnb_list4"i><a href="banquet.html">Banquet</a>
+                            <ul class="dept4">
+                                <li class="mainlist"><a href="banquet.html">Banquet</a></li>
+                                <li class="sublist"><a href="banquet.html">Ballroom</a></li>
+                                <li class="sublist"><a href="banquet.html">Maple</a></li>
+                                <li class="sublist"><a href="banquet.html">Conference Room</a></li>
+                                <li class="sublist"><a href="banquet.html">Oak</a></li>
+                            </ul>
+                        </li>
+                        <li class="gnb_list5"><a href="#">Events</a>
+                            <ul class="dept5">
+                                <li class="mainlist"><a href="#">Events</a></li>
+                                <li class="sublist"><a href="#">events</a></li>
+                            </ul>
+                        </li>
+                        <li class="gnb_list6"><a href="#">Guset Service</a>
+                            <ul class="dept6">
+                                <li class="mainlist"><a href="#">Guest Service</a></li>
+                                <li class="sublist"><a href="#">FAQ</a></li>
+                                <li class="sublist"><a href="#">공지사항</a></li>
+                                <li class="sublist"><a href="#">호텔이용후기</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="menuicon">
+                <a href="#" class="menuopen">
+                    <i class="fa-solid fa-bars"></i>
+                </a>
+            </div>
+            <div class="menuicon_list">
+                <a href="#" class="close"><i class="fa-solid fa-xmark"></i></a>
+                <ul>
+                    <li class="mainname">RAMADA DONGDAEMUN</li>
+                    <li class="subname"><a href="#">호텔 소개</a></li>
+                    <li class="subname"><a href="#">호텔 위치</a></li>
+                    <li class="subname"><a href="#">사업 개요</a></li>
+                    <li class="mainname"><a href="accomodation_page.html">ACCOMMODATION</a></li>
+                    <li class="subname"><a href="accomodation_page.html">Superior</a></li>
+                    <li class="subname"><a href="accomodation_page.html">Deluxe</a></li>
+                    <li class="subname"><a href="accomodation_page.html">Suite</a></li>
+                    <li class="mainname"><a href="#">EVENTS</a></li>
+                    <li class="subname"><a href="#">Events</a></li>
+                    <li class="mainname"><a href="banquet.html">BANQUET</a></li>
+                    <li class="subname"><a href="banquet.html">Ballroom</a></li>
+                    <li class="subname"><a href="banquet.html">Maple</a></li>
+                    <li class="subname"><a href="banquet.html">Conference Room</a></li>
+                    <li class="subname"><a href="banquet.html">Oak</a></li>
+                    <li class="mainname"><a href="dining.html">DINING</a></li>
+                    <li class="subname"><a href="dining.html">The Kitchen Neul</a></li>
+                    <li class="subname"><a href="dining.html">The Caffe R</a></li>
+                </ul>
+            </div>
+        </header>
+        <section class="mainimg">
+            <ul class="slide">
+                <li>
+                    <img src="img/real_neul111.jpeg" alt="">
+                    <span class="mask a"></span>
+                    <span class="mask b"></span>
+                    <span class="mask c"></span>
+                </li>
+                <li>
+                    <img src="img/real_neul444.jpeg" alt="">
+                    <span class="mask a"></span>
+                    <span class="mask b"></span>
+                    <span class="mask c"></span>
+                </li>
+                <li>
+                    <img src="img/real_neul333.jpeg" alt="">
+                    <span class="mask a"></span>
+                    <span class="mask b"></span>
+                    <span class="mask c"></span>
+                </li>
+            </ul>
+            <div class="textbox">
+                <h3>DINING</h3>
+                <p>The Kitchen Neul</p>
+            </div>
+        </section>
+        <section class="content">
+            <div class="inner animate" data-animate="motion">
+                <div class="topbox">
+                    <h3><span><b>The Kitchen Neul</b></span></h3>
+                    <p><b>카페스타일의 현대적 모던함이 돋보이는 공간으로 미각/ 시각/ 후각을 <br>사로잡은 프리미엄 디저트 & 샐러드 점심메뉴와 고품격 디너 만찬을 즐기 실 수 있습니다.</b></p>
+                </div>
+                <div class="bottombox swiper-container mySwiper">
+                    <ul class="swiper-wrapper">
+                        <li class="swiper-slide">
+                            <img src="img/neul111.jpg" alt="">
+                            <p class="overlay"></p>
+                        </li>
+                        <li class="swiper-slide">
+                            <img src="img/neul2.png" alt="">
+                            <p class="overlay"></p>
+                        </li>
+                        <li class="swiper-slide">
+                            <img src="img/neul4.png" alt="">
+                            <p class="overlay"></p>
+                        </li>
+                        <li class="swiper-slide">
+                            <img src="img/real_neul4.png" alt="">
+                            <p class="overlay"></p>
+                        </li>
+                        <li class="swiper-slide">
+                            <img src="img/real_neul3.png" alt="">
+                            <p class="overlay"></p>
+                        </li>
+                        <li class="swiper-slide">
+                            <img src="img/real_neul.png" alt="">
+                            <p class="overlay"></p>
+                        </li>
+                    </ul>
+                    <!-- 아래 버튼 위치는 swiper 자체 css에서 위치 변경함 -->
+                    <div class="swiper-button-next"><i class="fa-solid fa-chevron-right"></i></div>
+                    <div class="swiper-button-prev"><i class="fa-solid fa-chevron-left"></i></div>
+                </div>
+                <div class="information_box animate" data-animate="motion">
+                    <h3><span><b>INFORMATION</b></span></h3>
+                    <ul class="info_box_1">
+                        <li>
+                            <span class="redbox">Break Buffet</span>
+                            <span class="text">07:00 ~ 10:00</span>
+                        </li>
+                        <li>
+                            <span class="redbox">Lunch Buffet</span>
+                            <span class="text">11:30 ~ 14:30</span>
+                        </li>
+                        <li>
+                            <span class="redbox">Dinner</span>
+                            <span class="text">18:00 ~ 21:30</span>
+                        </li>
+                    </ul>
+                    <ul class="info_box_2">
+                        <li>
+                            <span class="txt1">운영시간</span>
+                            <span class="txt2">07:00 ~ 21:30</span>
+                        </li>
+                        <li>
+                            <span class="txt1">위치</span>
+                            <span class="txt2">라마다 바이 윈덤 서울 동대문 1F</span>
+                        </li>
+                        <li>
+                            <span class="txt1">좌석수</span>
+                            <span class="txt2">65석</span>
+                        </li>
+                        <li>
+                            <span class="txt1">연락처</span>
+                            <span class="txt2">02-2276-3544</span>
+                        </li>
+                    </ul>
+                    <p class="img">
+                        <img src="img/logo22.png" alt="">
+                    </p>
+                </div>
+            </div>
+        </section>
+        <footer>
+            <div class="inner">
+                <p>서울특별시 중구 동호로 354 (서울특별시 중구 을지로 5가 275-3번지) 라마다 서울 동대문 04561<br>
+                대표번호 02-0000-0000 / (판촉팀) 02-0000-0000 / Fex 02-0000-0000<br>
+                Copyright ⓒ 2016 RAMADA SEOUL. CO, LTD, All Rights Reserved.
+                </p>
+            </div>
+        </footer>
+    </div>
+    
+
+    <!-- swiper  -->
+    <script>
+    const swiper = new Swiper('.bottombox.swiper-container', {
+    loop: true,
+    centeredSlides: true,
+    slidesPerView: 'auto',
+    slideToClickedSlide: true,
+    effect: 'coverflow',
+    autoplay: true,
+    // spaceBetween : 10,
+    navigation: {   // 버튼 사용자 지정
+	nextEl: '.swiper-button-next',
+	prevEl: '.swiper-button-prev',
+},
+    coverflowEffect: {
+    // rotate: 45,
+    // slideShadows:true,
+},
+
+
+});
+    </script>
+
+
+
+</body>
+</html>
