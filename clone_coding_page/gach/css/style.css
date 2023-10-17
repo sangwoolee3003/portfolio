@@ -1,0 +1,264 @@
+@charset "utf-8";
+
+@font-face {
+    font-family: 'Pretendard-Regular';
+    src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
+
+
+/* reset */
+* {margin: 0;padding: 0; box-sizing: border-box;}
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, tbody, tfoot, thead, tr, th, td{margin:0;padding:0;}
+h1, h2, h3, h4, h5, h6 {font-weight: 700; font-size: inherit;}
+a {color: inherit; text-decoration: inherit;}
+img {vertical-align: middle;}
+a img {border: none;}
+li {list-style: none;}
+address, em, i {font-style: normal;}
+a:focus {outline: none}
+button:focus {outline: none}
+
+body::-webkit-scrollbar { 
+    display: none; /* 크롬, 사파리, 오페라, 엣지 */
+}
+body{font-family: 'Pretendard-Regular';}
+.wrap{width: 100%; overflow: hidden; }
+
+
+/* 헤더 부분 */
+header{width: 100%; height: 80px;   position: fixed; color: white;  z-index: 99;}
+header .inner{width: 80%; margin: 0 auto; overflow: hidden; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);}
+header .inner h2.logo{float: left;  font-size: 30px;}
+header .inner ul.menu{float: left; display: flex; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); }
+header .inner ul.menu li{margin-right: 30px; font-size: 18px; font-weight: bold;}
+header .inner div.qna{float: right; display: flex; font-weight: bold; font-size: 14px;  position: absolute;top: 50%; right: 0; transform: translateY(-50%);}
+header .inner div.qna a{padding: 0 20px 0 20px;}
+header .inner div.qna a:nth-child(1){border-right: 2px solid white;}
+
+
+/* 반응형 메뉴 아이콘 */
+header .inner div.menu_icon{display: none;}
+
+
+header.on {color: black; background-color: rgb(255, 255, 255); }
+header.on .inner div.qna a:nth-child(1){border-right: 2px solid black;}
+header.on .inner div.menu_icon span{background-color: black;}
+
+
+
+
+/* visual 부분 */
+.visual{width: 100%; height: 100vh; background: url(../img/img_bg01.jpg); background-repeat: no-repeat; background-size: cover; background-position: center; }
+.visual .inner{width: 100%; height: 100%;  margin: 0 auto; position: relative; }
+
+.visual .inner .textbox{width: 50%; color: white; position: absolute; left: 10%; top: 50%; transform: translateY(-50%);}
+.visual .inner .textbox p{font-size: 1.5vw; font-weight: bold; margin-bottom: 20px;}
+.visual .inner .textbox h3{font-size: 3vw; margin-bottom: 35px;}
+.visual .inner .textbox a{padding: 10px 40px; border-radius: 50px; border: 1px solid white; font-size: 1vw;}
+.visual .inner .scrollbox{color: white;  font-size: 20px; position: absolute; left: 7%; bottom: 10%;}
+.visual .inner .scrollbox::before{content: ''; width: 25px; height: 40px; border: 2px solid white; position: absolute; right: -30%; top: 50%; transform: translateY(-50%); border-radius: 20px; }
+.visual .inner .scrollbox::after{content: ''; width: 8px; height: 12px; background-color: white; border-radius: 35%; position: absolute; top: 0; right: -23%; opacity: 1; }
+
+/* visaul 애니메이션 */
+.visual .inner .scrollbox::after{animation-name: scroll; animation-duration: 1s; animation-iteration-count: infinite; transition: all 0.5s;}
+
+@keyframes scroll {
+    0%{top: 0%; opacity: 1;}
+    90%{top: 20%; opacity: 0.5;}
+}
+
+
+.visual.active .inner .textbox{animation-name: slide-up; animation-duration: 2s;}
+@keyframes slide-up {
+    0%{transform: translateY(50%); opacity: 0;}
+
+}
+
+
+
+
+
+/* service 부분 */
+.service{width: 100%; height: 100vh;  }
+.service .inner{width: 100%; height: 100%; margin: 0 auto; position: relative;}
+.service .inner ul{width: 100%; height: 100vh; position: relative;}
+.service .inner ul li.list01{width: 100%; display: flex; height: 100vh; background: url(../img/img_bg02.jpg); background-repeat: no-repeat; background-position: center; background-size: cover ; position: relative;}
+.service .inner ul li.list01 div.leftbox{width: 50%; height: 100%;   position: relative;  display: flex; justify-content: center; align-items: center;}
+.service .inner ul li.list01 div.leftbox .imgbox{width: 50%;     }
+/* .service .inner ul li.list01 div.leftbox .imgbox img{width: 70%; position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%);} */
+.service .inner ul li.list01 div.leftbox .imgbox img{width: 100%;  }
+
+
+.service .inner ul li.list01 div.rightbox{width: 50%;  align-self: center;}
+.service .inner ul li.list01 div.rightbox p{font-size: 1.5vw; font-weight: bold; margin-bottom: 30px;}
+.service .inner ul li.list01 div.rightbox h5{font-size: 3vw;  margin-bottom: 40px;}
+.service .inner ul li.list01 div.rightbox h5 span.purple{color: #4E2BF4;}
+.service .inner ul li.list01 div.rightbox a{font-size: 1vw; padding: 10px 40px; border-radius: 50px; border: 1px solid #4E2BF4; color: #4E2BF4;}
+
+
+
+.service .inner ul li.list02{width: 100%; padding: 30px 0; height: 100vh; margin: 0 auto; position: relative; }
+.service .inner ul li.list02 .topbox{width: 80%;  margin: 0 auto 100px;} 
+.service .inner ul li.list02 .topbox p{font-size: 1.3vw; font-weight: bold; margin-bottom: 50px;} 
+.service .inner ul li.list02 .topbox h5{font-size: 3vw; font-weight: bold; } 
+.service .inner ul li.list02 ul.service_list{width: 80%; margin: 0 auto; display: flex; justify-content: space-between;}
+.service .inner ul li.list02 ul.service_list li{width: 23%;}
+.service .inner ul li.list02 ul.service_list li a{display: block; width: 100%; margin-bottom: 30px;}
+.service .inner ul li.list02 ul.service_list li a img{width: 100%;;}
+.service .inner ul li.list02 ul.service_list li p{font-weight: bold; font-size: 1.5vw; text-align: center;}
+.service .inner ul li.list02 ul.service_list li:nth-child(2n){margin-top: 100px;}
+
+.service .inner ul li.list02 ul.service_list li:nth-child(1){border-radius: 0px 50px 0px 50px;  overflow: hidden;}
+.service .inner ul li.list02 ul.service_list li:nth-child(2){border-radius: 50px 0px 50px 0px;  overflow: hidden;}
+.service .inner ul li.list02 ul.service_list li:nth-child(3){border-radius: 50px 0px 50px 0px;  overflow: hidden;}
+.service .inner ul li.list02 ul.service_list li:nth-child(4){border-radius: 50px 0px 50px 0px;  overflow: hidden;}
+
+
+
+.service .inner ul li.list02 div.shadow{position: absolute;z-index: -1;  top: 12%; right: 1%;}
+.service .inner ul li.list02 div.shadow p{font-size: 13vw; font-weight: bold; color: #d4d4d4;}
+
+
+
+/* service(ul.slide) arrow 부분 */
+ul.slide button.slick-prev {position: absolute; top: 10%; right: 20%; transform: translateY(-50%); z-index: 1; text-indent: -9999px; background-color: transparent; width: 50px; height: 50px; border: none; cursor: pointer;} 
+ul.slide button.slick-prev::after{content: '<';  position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);  font-size: 20px; color: #828282;  text-indent: 0px; font-size: 35px;  }
+
+
+ul.slide button.slick-next {position: absolute; top: 10%; right:10%; transform: translateY(-50%); z-index: 1; text-indent: -9999px; background-color: transparent; width: 50px; height: 50px; border: none; cursor: pointer;} 
+ul.slide button.slick-next::after{content: '>';  position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);  font-size: 20px; color: #828282; text-indent: 0px; font-size: 35px;  } 
+
+
+
+
+.service .inner .num-box{position: absolute; top: 72px; right: 263px; z-index: 10;}
+.service .inner .num-box span{font-size: 30px; font-weight: bold; }
+.service .inner .num-box span:nth-child(2){color: #828282;}
+
+
+
+
+/* service 애니메이션 */
+.service.active .inner ul li.list01 div.leftbox .imgbox{animation-name: scale; animation-duration: 2s; transition: all 1s;}
+@keyframes scale{
+    0%{transform: scale(0);}
+}
+
+.service.active .inner ul li.list01 div.rightbox{animation-name: slide-up; animation-duration: 2s;}
+
+
+/* people 부분 */
+.people{width: 100%; height: 100vh; padding: 100px 0; background: url(../img/img_bg03.jpg); background-position: center; background-repeat: no-repeat; background-size: cover;}
+.people .inner{width: 90%; margin: 0 auto;}
+.people .inner .topbox{width: 100%; margin-bottom: 100px; color: white;}
+.people .inner .topbox p{font-size: 1.5vw; margin-bottom: 40px;}
+.people .inner .topbox h5{font-size: 3vw; margin-bottom: 45px;}
+.people .inner .topbox h5.mo{display: none;}
+.people .inner .topbox a{font-size: 1vw; text-align: center;  padding: 10px 40px; border-radius: 50px; border: 1px solid white;}
+
+
+
+
+
+.people .inner ul.people_list{width: 70%;  color: white; position: relative;  }
+.people .inner ul.people_list li{width: 30%; margin: 30px;   }
+.people .inner ul.people_list li p.title{padding: 20px; margin-bottom: 30px; background:  rgba(3,3,3,.35); position: relative;}
+.people .inner ul.people_list li p.title::before{content: ''; width: 0; height: 0; border-style: solid; border-color: rgba(3,3,3,.35) transparent transparent transparent; position: absolute; top: 100%; left: 50px; border-width: 10px 10px 10px 10px;}
+.people .inner ul.people_list li p.title span{display: block; margin-bottom: 20px; font-weight: bold;}
+.people .inner ul.people_list li div.box{width: 80%; display: flex; justify-content: space-between; margin-left: 20px; }
+.people .inner ul.people_list li div.box p.img{width: 20%;}
+.people .inner ul.people_list li div.box p.img img{width: 100%; border-radius: 50%;}
+.people .inner ul.people_list li div.box p.tit{width: 70%; align-self: center;}
+.people .inner ul.people_list li div.box p.tit span.bold{font-weight: bold;}
+
+
+/* peolpe(ul.slide2) arrow 부분 */
+ul.slide2 button.slick-prev {position: absolute; top: -10%; right: 7%;  z-index: 1; text-indent: -9999px; background-color: transparent; width: 50px; height: 50px; border: none; cursor: pointer;} 
+ul.slide2 button.slick-prev::after{content: '<';  position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);  font-size: 20px; color: #828282;  text-indent: 0px; font-size: 35px;  }
+
+
+ul.slide2 button.slick-next {position: absolute; top: -10%; right:0%;  z-index: 1; text-indent: -9999px; background-color: transparent; width: 50px; height: 50px; border: none; cursor: pointer;} 
+ul.slide2 button.slick-next::after{content: '>';  position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);  font-size: 20px; color: #828282; text-indent: 0px; font-size: 35px;  } 
+
+
+
+/* people 애니메이션 부분 */
+.people.active .inner{animation-name: slide-up; animation-duration: 2s;}
+
+
+
+
+
+
+
+
+
+
+
+/* 반응형 */
+@media screen and (max-width:800px) {
+
+    header .inner ul.menu{display: none;}
+    header .inner div.qna{display: none;}
+    header .inner div.menu_icon{display: block; float: right; position: absolute; top: 50%; right: 0; transform: translateY(-50%);}
+    header .inner div.menu_icon span{display: block; width: 30px; height: 2px; background-color: white;}
+    header .inner div.menu_icon span:nth-child(1){margin-bottom: 7px;}
+    header .inner div.menu_icon span:nth-child(2){margin-bottom: 7px;}
+
+    .visual{background: url(../img/img_bg01_m.jpg); background-repeat: no-repeat; background-position: center; background-size: cover;}
+    .visual .inner .textbox{left: 0%; top: 24%; width: 100%; padding: 0 30px ;}
+    .visual .inner .textbox h3{font-size: 5vw;}
+    .visual .inner .textbox p{font-size: 3vw; text-align: center;}
+    .visual .inner .textbox a{font-size: 2vw;}
+    .visual .inner .scrollbox{display: none;}
+
+
+    .service .inner ul li.list01{flex-wrap: wrap;}
+    .service .inner ul li.list01 div.leftbox{width: 100%; height: 70vh;}
+    .service .inner ul li.list01 div.leftbox .imgbox{width: 50%; }
+    .service .inner ul li.list01 div.leftbox .imgbox img{left: 114%; top: 71%;}
+    .service .inner ul li.list01 div.rightbox{width: 90%; height: 50%; margin: 0 auto;}
+    .service .inner ul li.list01 div.rightbox p{font-size: 2.3vw;}
+    .service .inner ul li.list01 div.rightbox h5{font-size: 4vw;}
+    .service .inner ul li.list01 div.rightbox a{font-size: 2vw;}
+    .service .inner .num-box{display: none;}
+
+
+
+    .service .inner ul li.list02 {padding: 105px 0;}
+    .service .inner ul li.list02 .topbox{margin: 0 auto 30px;}
+    .service .inner ul li.list02 .topbox p{font-size: 2.3vw; margin-bottom: 18px;}
+    .service .inner ul li.list02 .topbox h5{font-size: 4vw;}
+    .service .inner ul li.list02 ul.service_list{flex-wrap: wrap; height: 40vh;}
+    .service .inner ul li.list02 ul.service_list li{width: 45%; }
+    .service .inner ul li.list02 ul.service_list li:nth-child(2n){margin-top: 80px;}
+    .service .inner ul li.list02 ul.service_list li a{width: 60%; margin: 0 auto 20px;}
+    .service .inner ul li.list02 ul.service_list li p{font-size: 2vw;}
+    .service .inner ul li.list02 div.shadow{right: -14%;}
+
+
+
+
+
+
+
+    .people{background: url(../img/img_bg03_m.png); background-repeat: no-repeat; background-position: center; background-size: cover;}
+
+    .people .inner .topbox p{font-size: 2.3vw;}
+    .people .inner .topbox h5{display: none;}
+    .people .inner .topbox h5.mo{font-size: 4vw; display: block;}
+    .people .inner .topbox a{font-size: 2vw;}
+
+
+    ul.slide2 button.slick-prev{right: 0; left: 1%;}
+    ul.slide2 button.slick-next{right: 0; left: 12%;}
+    .people .inner ul.people_list{width: 80%;}
+    /* .people .inner ul.people_list li{width: 80%;}
+    .people .inner ul.people_list li p{width: 100%;} */
+    .people .inner ul.people_list{width: 96%;}
+    .people .inner ul.people_list li div.box p.img{width: 14%;}
+    .people .inner ul.people_list li div.box p.tit{width: 82%;}
+}
+
