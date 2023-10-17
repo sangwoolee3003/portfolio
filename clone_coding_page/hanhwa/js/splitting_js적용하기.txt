@@ -1,0 +1,29 @@
+//splitting.js적용하기
+1.head영역 연결
+   <script src="js/jquery-3.3.1.min.js"></script>
+   <script src="js/splitting.min.js"></script>           > 이거는 https://splitting.js.org/guide.html#using-npm에 본 후 스크립트 SRC링크 들어가서 문서로만들기하면 되지만 이건 선생님이 만들어서 주심
+  <script src="js/script.js"></script>
+
+2.script.js파일에 작성
+   $(function(){ Splitting();});
+   
+3.html파일 태그(div, h2, p..블럭요소)에 data-splitting 붙임
+    ex)  <div data-splitting> abc</div>
+
+4.개발자도구에서 .words, chars,splittings가 붙었는지 확인 => 연결 성공
+
+5.css.작성
+.splitting .char {
+  display:inline-block;
+  animation: slide-up 1s cubic-bezier(.5, 0, .5, 1) both;
+  animation-delay: calc(60ms * var(--char-index));
+}
+
+>>>.splitting .char 이 클래스는 div에data-splitting 넣고 개발자 도구에서 확인해보면 자동으로 붙여져있음 따라서 해당 클래스에 애니메이션을 붙여줘야함
+
+
+
+@keyframes slide-up {
+    0% {opacity: 0; transform: translateY(50px);}
+    80% {opacity: 0; transform: translateY(50px);}
+}

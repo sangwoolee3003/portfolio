@@ -1,0 +1,105 @@
+@charset "utf-8";
+
+/* reset */
+* {margin: 0;padding: 0;}
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, tbody, tfoot, thead, tr, th, td{margin:0;padding:0;}
+h1, h2, h3, h4, h5, h6 {font-weight: 700; font-size: inherit;}
+a {color: inherit; text-decoration: inherit;}
+img {vertical-align: middle;}
+a img {border: none;}
+li {list-style: none;}
+address, em, i {font-style: normal;}
+a:focus {outline: none}
+button:focus {outline: none}
+
+
+/* 헤더부분 */
+header{width: 100%; height: 100px; line-height: 100px; background-color: rgba(0, 0, 0, 0.3); position: fixed;}
+header .inner{width: 1600px; margin: 0 auto;  display: flex; }
+header .inner .leftbox{width: 70%;  display: flex; font-size: 15px; color: white;}
+header .inner .leftbox h1.img{width: 20%; height: 50px; }
+header .inner .leftbox h1.img img{display: block; width: 80%; height: 50px; margin-top: 25px; }
+header .inner .leftbox ul.gnb{width: 50%; display: flex;justify-content: space-between;}
+header .inner .leftbox ul.gnb a{display: block;}
+header .inner .leftbox ul.gnb a:hover{color: orangered;}
+header .inner .leftbox ul.gnb li{width: 23%;  text-align: center; }
+
+
+header .inner .rightbox{width: 30%;  font-size: 14px; color: white;}
+header .inner .rightbox a{display: inline-block; margin-right: 15px; }
+header .inner .rightbox i{margin-right: 5px; margin-left: 5px;}
+header .inner .rightbox a span{display: inline-block;  height: 30px; line-height: 30px; border-radius: 30px; padding: 0 10px; border: 1px solid white;}
+header .inner .rightbox a span:hover{color: orangered; background-color: white;}
+
+/* con1 부분 */
+.con1{width: 100%; height: 100vh; background-image: url(../img/vis_4.jpg); background-repeat: no-repeat; background-position: center; background-attachment: fixed;}
+.con1 .inner{text-align: center; width: 1600px;  margin: 0 auto;}
+.con1 .inner h1{color: white; font-size: 55px; padding-top: 250px; margin-bottom: 30px;}
+.con1 .inner p{color: white; font-size: 20px; margin-bottom: 30px;}
+.con1 .inner a{display: block;}
+.con1 .inner a span:hover{color: orangered; background-color: white;}
+.con1 .inner span{display: block; color: white; width: 100px;  margin: 0 auto; padding: 5px 25px; border: 1px solid white ; border-radius: 30px;}
+
+
+/* 어바웃 부분 */
+.about{width: 100%; margin-top: 80px; }
+.about .inner{width: 1600px; margin: 0 auto; }
+.about .inner .topbox h2{font-size: 30px; text-align: center; margin-bottom: 20px;}
+.about .inner .topbox p{text-align: center; line-height: 1.8; margin-bottom: 30px;}
+
+.about .inner .bottombox ul{display: flex; border-bottom: 1px solid #3a3c3e; }
+.about .inner .bottombox ul li{width: 33.3%; border-bottom: 1px solid black; }
+.about .inner .bottombox ul li p.img{width: 100%;overflow: hidden; }
+.about .inner .bottombox ul li p.img img{display: block; width: 100%; transition: all .5s;}
+.about .inner .bottombox ul li p.img:hover img{transform: scale(1.2);}
+.about .inner .bottombox ul li .text{padding: 30px;}
+.about .inner .bottombox ul li .text h3{font-size: 18px; margin-bottom: 10px;}
+.inner .bottombox ul li .text p.subtext{ margin-bottom: 20px; }
+.inner .bottombox ul li .text a{display: block; margin-left: 30px; position: relative;}
+.inner .bottombox ul li .text a::before{content:'\f178'; position: absolute; left: -35px; font-family: fontAwesome; font-size: 15px; width: 30px; height: 30px; background-color: #ff8342; border-radius: 50%; line-height: 30px}
+
+
+/* our부분 */
+.our{width: 100%; padding: 100px 0; }
+.our .inner{position: relative;  width: 1400px; margin: 0 auto; }
+.our .inner .topbox{width: 100%; text-align: center;}
+.our .inner .topbox h2{font-size: 30px; margin-bottom: 20px;}
+.our .inner .topbox p{line-height: 1.8; margin-bottom: 30px;}
+
+.our .inner .bottombox{width: 100%; text-align: center;}
+.our .inner .bottombox p.img{width: 100%; height: 540px; position: relative;}
+.our .inner .bottombox p.img img{width: 100%; height: 100%;}
+
+.our .inner .subtext{position: absolute; left: 200px; bottom: -50px; width: 75%; background-color: rgb(61, 61, 61);}
+.our .inner .subtext h3{padding: 20px 35px; background-color: aliceblue;}
+.our .inner .subtext ul{display: flex; justify-content: space-between; padding: 30px 40px;}
+.our .inner .subtext ul li:nth-child(1){width: 80%;font-size: 12px; line-height: 1.6; padding-left: 15px; color: white;}
+.our .inner .subtext ul li:nth-child(2){width: 20%; font-size: 13px; }
+.our .inner .subtext ul li:nth-child(2) a{display: block; width: 100px; height: 30px; line-height: 30px; text-align: center; background-color: #ff8342; border-radius: 30px; padding: 5px 15px; color: white;}
+.our .inner .subtext ul li:nth-child(2) a:hover{background-color: #84411d;}
+
+
+/* 앞에 박스에 호버주고 비포/에프터 만는거에 효과줌 */
+/* 이미지에는 비포 에프터가 안만드어짐 */
+.our .inner .bottombox p.img::before{transition: all .5s; content: ''; width: 0%; height: 100%;  background-color: rgba(255,131,66,0.9); position: absolute; left: 0; top: 0;}
+.our .inner .bottombox:hover p.img::before{width: 100%;}
+
+.our .inner .bottombox p.img::after{ content: '자세히보기'; color: white; font-weight: bold; position: absolute; left: 50%; top: 50%; transform: translate(-50%,-50%); opacity: 0;}
+.our .inner .bottombox:hover p.img::after{opacity: 1;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
