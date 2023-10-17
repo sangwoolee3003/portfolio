@@ -1,0 +1,149 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+/* reset */
+* {margin: 0;padding: 0; box-sizing: border-box;}
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, tbody, tfoot, thead, tr, th, td{margin:0;padding:0;}
+h1, h2, h3, h4, h5, h6 {font-weight: 700; font-size: inherit;}
+a {color: inherit; text-decoration: inherit;}
+img {vertical-align: middle;}
+a img {border: none;}
+li {list-style: none;}
+address, em, i {font-style: normal;}
+a:focus {outline: none}
+button:focus {outline: none}
+
+
+/* font-family: 'Noto Sans KR', sans-serif; */
+body{font-family:'Noto Sans KR', sans-serif; font-size: 15px;}
+.wrap{overflow: hidden;}
+
+
+header{width: 100%; height: 100px; line-height: 100px; background-color: #21201c; }
+header .innerheader{width: 100%;; margin: 0 auto; overflow: hidden;  }
+header .innerheader h1{float: left; width: 150px;  margin-top: 55px; margin-left: 20px; margin-right: 50px;}
+header .innerheader h1 img{display: block; width: 100%; } 
+header .innerheader ul.menu{float: left; display: flex; justify-content: space-between;  }
+header .innerheader ul.rightbox{float: right; display: flex; justify-content: space-between;  }
+
+header .innerheader ul.menu li{ margin-right:25px; margin-top: 30px; color: white;}
+header .innerheader ul.menu li:nth-child(1){color: #dfbf9f;}
+header .innerheader ul.rightbox li{margin-right:25px; margin-top: -30px; color: gray; font-size: 12px;}
+header .innerheader ul.rightbox li:nth-child(7){color: white;}
+
+
+
+
+
+
+
+
+/* VISUAL 부분 */
+.visual{width: 100%;}
+.visual .inner{width: 100%; margin: 0 auto;}
+.visual .inner ul{width: 100%;}
+.visual .inner ul li{width: 100%;position: relative;}
+.visual .inner ul li img{display: block; width: 100%; }
+.visual .inner ul li div.textbox{ width: 100%; padding: 0 150px; position: absolute; left: 0; top: 20%;}
+.visual .inner ul li div.textbox span{font-size: 18px; display: block; color: #dfbf9f; font-weight: 700; margin-bottom: 10px;}
+.visual .inner ul li div.textbox h3{color: white; font-size: 55px;  margin-bottom: 20px;}
+.visual .inner ul li div.textbox p{font-size: 20px; color:white; margin-bottom: 50px; }
+.visual .inner ul li div.textbox a{display: inline-block; padding: 10px 30px; background-color: #dfbf9f; border-radius: 50px; color: white;}
+.visual .inner ul li div.textbox a.link1{margin-right: 20px; }
+
+.visual .inner ul li div.bottombox{width: 100%;}
+.visual .inner ul li div.bottombox ul{width: 1000px;  margin: 0 auto; display: flex;  text-align: center; font-size: 12px; color: white; font-weight: 800; position: absolute; bottom: 60px; left: 25%;}
+.visual .inner ul li div.bottombox ul li{ border-right: 1px solid white;}
+.visual .inner ul li div.bottombox ul li:nth-child(6){ border:none;}
+
+.visual .inner ul li:nth-child(3) div.bottombox ul li{border-right: 1px solid black;}
+
+
+
+
+
+/* offer부분 */
+.offer{width: 100%; padding: 100px 0 ;}
+.offer .inner{width: 60%; margin: 0 auto;}
+.offer .inner .topbox{width: 100%;}
+.offer .inner .topbox h3{font-size: 30px; text-align: center; color: #dfbf9f; margin-bottom: 10px;}
+.offer .inner .topbox p{font-size: 15px; text-align: center; color: gray; margin-bottom: 50px; }
+
+.offer .inner .bottombox{width: 100%;}
+.offer .inner .bottombox ul{width: 100%; display: flex; justify-content: space-between;}
+.offer .inner .bottombox ul li{width: 23%; border: 1px solid rgba(0,0,0,0.2); margin-bottom: 50px;}
+.offer .inner .bottombox ul li div.img{width: 100%; overflow: hidden;}
+.offer .inner .bottombox ul li div.img img{width: 100%; transition: all 1.5s;}
+.offer .inner .bottombox ul li div.img:hover img{transform: scale(1.2);}
+
+.offer .inner .bottombox ul li h5{margin: 15px;}
+.offer .inner .bottombox ul li p{margin: 15px; font-size: 13px; color: gray; height: 50px;}
+.offer .inner .bottombox ul li span.price{display: block; margin: 15px; font-weight: bold;}
+.offer .inner .bottombox ul li span.date{display: block; margin: 15px; font-size: 11px; color: gray;}
+
+.offer .inner .bottombox p.morebox{width: 100%; }
+.offer .inner .bottombox a{display: block; width: 100px; text-align: center; margin: 0 auto; color: #9d856e; text-decoration: underline; }
+
+
+
+/* ENENT 부분 */
+.event{width: 100%; padding: 100px 0 ; background-color:#eee; }
+.event .inner{width: 60%; margin: 0 auto;}
+.event .inner .topbox{width: 100%;}
+.event .inner .topbox h3{font-size: 30px; text-align: center; color: #dfbf9f; margin-bottom: 10px;}
+.event .inner .topbox p{font-size: 15px; text-align: center; color: gray; margin-bottom: 50px; }
+
+.event .inner .bottombox{width: 100%;}
+.event .inner .bottombox ul{width: 100%; display: flex; justify-content: space-between;}
+.event .inner .bottombox ul li{width: 30%; border: 1px solid rgba(0,0,0,0.2); margin-bottom: 50px;}
+.event .inner .bottombox ul li div.img{width: 100%; overflow: hidden;}
+.event .inner .bottombox ul li div.img img{width: 100%; transition: all 1.5s;}
+.event .inner .bottombox ul li div.img:hover img{transform: scale(1.2);}
+
+.event .inner .bottombox ul li h5{margin: 15px;}
+.event .inner .bottombox ul li p{margin: 15px; font-size: 13px; color: gray; height: 50px;}
+.event .inner .bottombox ul li span.date{display: block; margin: 15px; font-size: 11px; color: gray;}
+
+.event .inner .bottombox p.morebox{width: 100%; }
+.event .inner .bottombox a{display: block; width: 100px; text-align: center; margin: 0 auto; color: #9d856e; text-decoration: underline; }
+
+
+
+/* reward부분 */
+.reward{width: 100%; padding: 100px 0 ;  }
+.reward .inner{width: 60%; margin: 0 auto;}
+.reward .inner .topbox{width: 100%;}
+.reward .inner .topbox h3{font-size: 30px; text-align: center; color: #dfbf9f; margin-bottom: 10px;}
+.reward .inner .topbox p{font-size: 15px; text-align: center; color: gray; margin-bottom: 50px; }
+
+
+.reward .inner .bottombox{width: 100%;}
+.reward .inner .bottombox ul{width: 100%; display: flex; justify-content: space-between;}
+.reward .inner .bottombox ul li{width: 32%;  margin-bottom: 50px; position: relative;}
+.reward .inner .bottombox ul li div.img{width: 100%;  position: relative;}
+.reward .inner .bottombox ul li div.img::before{content: ''; width: 100%; height: 100%; background-color: #21201c; position: absolute; left: 0; top: 0; opacity: 0; }
+.reward .inner .bottombox ul li div.img img{width: 100%; transition: all 1.5s;}
+
+/* .reward .inner ul li p.main1{text-align: center; line-height: 1.7; font-size: 13px; }
+.reward .inner ul li p.more a{ text-align: center; background-color: #9d856e; } */
+
+.reward .inner .bottombox ul li p.main1{width: 100%; text-align: center; height: 120px; font-size: 13px; line-height: 1.7; color: white; padding-top: 15px; position: absolute; top: 25%; opacity: 0; transition: all .5s;}
+.reward .inner .bottombox ul li p.more {width: 100%;  position: absolute; bottom: 25%; opacity: 0; transition: all .5s;}
+.reward .inner .bottombox ul li p.more a{display: block; width: 120px; border: 1px solid white; color: white; text-align: center; margin: 0 auto; padding: 10px 15px; } 
+
+.reward .inner .bottombox ul li h5{text-align: center; margin-top: 20px;}
+
+
+
+/* reward 호버부분 */
+.reward .inner .bottombox ul li:hover p.main1{opacity: 1; top: 33%; }
+.reward .inner .bottombox ul li:hover p.more{opacity: 1; bottom: 33%; }
+.reward .inner .bottombox ul li:hover div.img::before{opacity: 0.7;}
+
+
+
+
+
+
+
+
